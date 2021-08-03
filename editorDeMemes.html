@@ -8,8 +8,96 @@
     <link rel="stylesheet" href="editorDeMemes.js">
     <title>Document</title>
 </head>
+
 <body>
-    <p>holi</p>
+    <header>
+    <h1>Generador de Memes</h1>
+<div>
+    <button>Imagen</button>
+    <button>Texto</button>
+    <button>Modo Oscuro</button>
+</div>
+</header>
+<div >
+<!--caja del meme-->
+
+</div>
+<aside class="imagen">
+<!--aside-->
+<h2>Imagen</h2>
+
+    <form action="" method="get">
+<div>
+<label for="url">URL
+<input type="url" name="url" id="url" pattern="https://.*" required>
+</label>
+</div>
+<div>
+    <label for="">fondo</label>
+    <input type="color" name="" id="">
+    <label for="background"></label>
+    <select id="background">
+    <option value="Ninguno">Ninguno</option>
+    <option value="Aclara">Aclara</option>
+    <option value="Oscurecer">Oscurecer</option>
+    <option value="Diferencia">Diferencia</option>
+    <option value="Luminosidad">Luminosidad</option>
+    <option value="Multiplicar">Multiplicar</option>    
+</select>
+</label>
+</div>
+<label for="">BRILLO
+<input type="range">
+</label> 
+<label for=""> OPACIDAD
+<input type="range">
+</label>
+<label for=""> CONTRASTE
+<input type="range">
+</label>
+<label for=""> DESENFOQUE
+<input type="range">
+</label>
+<label for=""> ESCALA DE GRISES
+<input type="range">
+</label>
+<label for=""> SEPIA
+<input type="range">
+</label>
+<label for=""> HUE
+<input type="range">
+</label>
+<label for=""> SATURADO
+<input type="range">
+</label>
+<label for=""> NEGATIVO
+<input type="range">
+</label>
+<input type="submit" name="" id="" value="Reestablecer Filtros">
+</form>
+</aside>
+<aside class="texto">
+<h2>TEXTO</h2>
+<label for="">Superior
+    <input type="textarea" name="" id="">
+   <input type="checkbox" name="" id="" placeholder="TOP TEXT">
+   <label> Sin texto superior </label>
+</label>
+<label for="">INFERIOR
+    <input type="textarea" name="" id="">
+   <input type="checkbox" name="" id="" placeholder="BUTTOM TEXT">
+   <label>Sin texto inferior </label>
+</label>
+<select name="" id="">
+    <option value="Arial">Ninguno</option>
+    <option value="Arial Black">Aclara</option>
+    <option value=" American Typewriter">Oscurecer</option>
+    <option value="Andale Mono">Diferencia</option>
+    <option value="Comic Sans MS">Luminosidad</option>
+    <option value="Helvetica">Multiplicar</option>
+    <option value="Impact"></option>    
+</select>
+</aside>
     <script src="/editorDeMemes.js"></script>
 </body>
 </html>
