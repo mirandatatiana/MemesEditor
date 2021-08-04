@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="editorDeMemes.css">
     <link rel="stylesheet" href="editorDeMemes.js">
-    <title>Document</title>
+    <title>Generador de Memes</title>
 </head>
 <body>
     <!-- Empieza el header -->
@@ -102,6 +102,7 @@
             <label>Sin texto inferior</label>
         </div>
         <div class="font-editor">
+            <h2 class="option-text-font">FUENTE</h2>
             <select id="font-selection">
                 <option value="arial">Arial</option>
                 <option value="arial-black">Arial Black</option>
@@ -117,6 +118,41 @@
             <button class="center"></button>
             <button class="right"></button>
         </div>
+
+            
+        <div class="text-colour">
+            <h3 class="colour-text">COLOR</h3>
+            <input type="colour" name="" id="">
+        </div>
+
+        <div class="background-text">
+            <h3 class="background">FONDO</h3>
+            <input type="color" name="" id="">
+            <input type="checkbox" name="" id="">
+            <label>Fondo transparente</label>
+        </div>
+
+        <div class="contour-text">
+            <h3 class="contour">CONTORNO</h3>
+            <button class="button-none">NINGUNO</button>
+            <button class="button-light">CLARO</button>
+            <button class="button-dark">OSCURO</button>
+        </div>
+
+        <div class="spacing-text">
+            <h3 class="spacing">ESPACIADO</h3>
+            <input type="number" name="number" id="number" placeholder="35">
+        </div>
+
+        <div class="interlined-text">
+            <h3 class="interlined">INTERLINEADO</h3>
+            <input type="number" name="number" id="number" placeholder="1.2">
+        </div>
+
+    </aside>
+
+        
+
     </aside>
     <!-- Termina el aside de texto -->
 <script src="/editorDeMemes.js"></script>
