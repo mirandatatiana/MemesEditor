@@ -8,25 +8,28 @@
 
 /* Estilos del header */
 .header {
-  height: 20vh;
-}
-
-/* Estilos del contenedor del main y del aside */
-.container {
-  display: flex;
-  height: 80vh;
+  background-color: #191e2b;
+  height: 15vh;
 }
 
 /* Estilos del main */
 .main-content {
-  height: 100%;
-  width: 80%;
+  background-color: #30343f;
+  height: 85vh;
+}
+
+/* Estilos de los dos aside */
+.aside {
+  background-color: #252935;
 }
 
 /* Estilos del aside de imagen */
-
 .image-editor {
-  width: 20%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 270px;
 }
 
 /* Estilos del aside de texto */
