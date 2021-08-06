@@ -1,8 +1,35 @@
 /* Estilos básicos */
-
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+/* Estilos del header */
+.header {
+  height: 20vh;
+}
+
+/* Estilos del contenedor del main y del aside */
+.container {
+  display: flex;
+  height: 80vh;
+}
+
+/* Estilos del main */
+.main-content {
+  height: 100%;
+  width: 80%;
+}
+
+/* Estilos del aside de imagen */
+
+.image-editor {
+  width: 20%;
+}
+
+/* Estilos del aside de texto */
+.text-editor {
+  display: none;
 }

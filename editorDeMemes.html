@@ -23,126 +23,127 @@
     </header>
     <!-- Termina el header -->
     <!-- Empieza la caja del meme -->
-    <main class="main-content">
-        <div class="meme-container">
-            <p class="meme-top-text meme-text">TOP TEXT</p>
-            <div class="meme-image"></div>
-            <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
-        </div>
-        <button class="download">Descargar meme</button>
-    </main>
-    <!-- Termina la caja del meme -->
-    <!-- Empieza el aside de imagen -->
-    <aside class="image-editor aside">
-        <h2 editor-title>IMAGEN</h2>
-        <form action="" method="POST" class="image-form">
-            <div class="url-editor editor">
-                <h3 class="editor-subtitle">URL</h3>
-                <input type="url" name="url" id="url" pattern="https://.*" required>
+    <div class="container">
+        <main class="main-content">
+            <div class="meme-container">
+                <p class="meme-top-text meme-text">TOP TEXT</p>
+                <div class="meme-image"></div>
+                <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
             </div>
-            <div class="background-editor editor">
-                <h3 class="editor-subtitle">FONDO</h3>
-                <input type="color" name="color" id="color">
-                <select id="background">
-                    <option value="none" id="none">Ninguno</option>
-                    <option value="lighten" id="lighten">Aclarar</option>
-                    <option value="darken" id="darken">Oscurecer</option>
-                    <option value="contrast" id="contrast">Diferencia</option>
-                    <option value="brightness" id="brightness">Luminosidad</option>
-                    <option value="multiply" id="multiply">Multiplicar</option>    
+            <button class="download">Descargar meme</button>
+        </main>
+        <!-- Termina la caja del meme -->
+        <!-- Empieza el aside de imagen -->
+        <aside class="image-editor aside">
+            <h2 editor-title>IMAGEN</h2>
+            <form action="" method="POST" class="image-form">
+                <div class="url-editor editor">
+                    <h3 class="editor-subtitle">URL</h3>
+                    <input type="url" name="url" id="url" pattern="https://.*" required>
+                </div>
+                <div class="background-editor editor">
+                    <h3 class="editor-subtitle">FONDO</h3>
+                    <input type="color" name="color" id="color">
+                    <select id="background">
+                        <option value="none" id="none">Ninguno</option>
+                        <option value="lighten" id="lighten">Aclarar</option>
+                        <option value="darken" id="darken">Oscurecer</option>
+                        <option value="contrast" id="contrast">Diferencia</option>
+                        <option value="brightness" id="brightness">Luminosidad</option>
+                        <option value="multiply" id="multiply">Multiplicar</option>    
+                    </select>
+                </div>
+                <div class="filter-editor editor">
+                    <h3 class="editor-subtitle">FILTROS</h3>
+                    <label for="bright" id="brightness">BRILLO
+                        <input type="range">
+                    </label> 
+                    <label for="opacity" id="opacity">OPACIDAD
+                        <input type="range">
+                    </label>
+                    <label for="contrast" id="contrast">CONTRASTE
+                        <input type="range">
+                    </label>
+                    <label for="blur" id="blur">DESENFOQUE
+                        <input type="range">
+                    </label>
+                    <label for="greyscale" id="greyscale">ESCALA DE GRISES
+                        <input type="range">
+                    </label>
+                    <label for="sepia" id="sepia">SEPIA
+                        <input type="range">
+                    </label>
+                    <label for="hue" id="hue">HUE
+                        <input type="range">
+                    </label>
+                    <label for="saturated" id="saturated">SATURADO
+                        <input type="range">
+                    </label>
+                    <label for="negative" id="negative">NEGATIVO
+                        <input type="range">
+                    </label>
+                </div>
+                <input type="submit" name="reset-filters" id="reset-filters" value="Reestablecer filtros">
+            </form>
+        </aside>
+        <!-- Termina el aside de imagen -->
+        <!-- Empieza el aside de texto -->
+        <aside class="text-editor aside">
+            <h2 class="editor-title">TEXTO</h2>
+            <div class="superior-text-editor editor">
+                <h3 class="editor-subtitle">SUPERIOR</h3>
+                <input type="checkbox" name="top-text-editor" id="top-text-editor" placeholder="TOP TEXT">
+                <label for="top-text-editor">Sin texto superior</label>
+            </div>
+            <div class="inferior-text-editor editor">
+                <h3 class="editor-subtitle">INFERIOR</h3>
+                <input type="checkbox" name="bottom-text-editor" id="bottom-text-editor" placeholder="BOTTOM TEXT">
+                <label for="bottom-text-editor">Sin texto inferior</label>
+            </div>
+            <div class="font-editor editor">
+                <h3 class="editor-subtitle">FUENTE</h3>
+                <select id="font-selection">
+                    <option value="arial" id="arial">Arial</option>
+                    <option value="arial-black" id="arial-black">Arial Black</option>
+                    <option value="american-typewriter" id="american-typewriter">American Typewriter</option>
+                    <option value="comic-sans" id="comic-sans">Comic Sans MS</option>
+                    <option value="helvetica" id="helvetica">Helvetica</option>
+                    <option value="impact" id="impact">Impact</option>
+                    <option value="verdana" id="verdana">Verdana</option>
+                    <option value="times-new-roman" id="times-new-roman">Times New Roman</option>    
                 </select>
+                <input type="number" name="font-size" id="font-size" placeholder="40">
+                <button class="left-aligment"></button>
+                <button class="center-alignment"></button>
+                <button class="right-aligment"></button>
             </div>
-            <div class="filter-editor editor">
-                <h3 class="editor-subtitle">FILTROS</h3>
-                <label for="bright" id="brightness">BRILLO
-                    <input type="range">
-                </label> 
-                <label for="opacity" id="opacity">OPACIDAD
-                    <input type="range">
-                </label>
-                <label for="contrast" id="contrast">CONTRASTE
-                    <input type="range">
-                </label>
-                <label for="blur" id="blur">DESENFOQUE
-                    <input type="range">
-                </label>
-                <label for="greyscale" id="greyscale">ESCALA DE GRISES
-                    <input type="range">
-                </label>
-                <label for="sepia" id="sepia">SEPIA
-                    <input type="range">
-                </label>
-                <label for="hue" id="hue">HUE
-                    <input type="range">
-                </label>
-                <label for="saturated" id="saturated">SATURADO
-                    <input type="range">
-                </label>
-                <label for="negative" id="negative">NEGATIVO
-                    <input type="range">
-                </label>
+            <div class="text-color-editor editor">
+                <h3 class="editor-subtitle">COLOR</h3>
+                <input type="color" name="text-color" id="text-color">
             </div>
-            <input type="submit" name="reset-filters" id="reset-filters" value="Reestablecer filtros">
-        </form>
-    </aside>
-    <!-- Termina el aside de imagen -->
-    <!-- Empieza el aside de texto -->
-    <aside class="text-editor aside">
-        <h2 class="editor-title">TEXTO</h2>
-
-        <div class="superior-text-editor editor">
-            <h3 class="editor-subtitle">SUPERIOR</h3>
-            <input type="checkbox" name="top-text-editor" id="top-text-editor" placeholder="TOP TEXT">
-            <label for="top-text-editor">Sin texto superior</label>
-        </div>
-        <div class="inferior-text-editor editor">
-            <h3 class="editor-subtitle">INFERIOR</h3>
-            <input type="checkbox" name="bottom-text-editor" id="bottom-text-editor" placeholder="BOTTOM TEXT">
-            <label for="bottom-text-editor">Sin texto inferior</label>
-        </div>
-        <div class="font-editor editor">
-            <h3 class="editor-subtitle">FUENTE</h3>
-            <select id="font-selection">
-                <option value="arial" id="arial">Arial</option>
-                <option value="arial-black" id="arial-black">Arial Black</option>
-                <option value="american-typewriter" id="american-typewriter">American Typewriter</option>
-                <option value="comic-sans" id="comic-sans">Comic Sans MS</option>
-                <option value="helvetica" id="helvetica">Helvetica</option>
-                <option value="impact" id="impact">Impact</option>
-                <option value="verdana" id="verdana">Verdana</option>
-                <option value="times-new-roman" id="times-new-roman">Times New Roman</option>    
-            </select>
-            <input type="number" name="font-size" id="font-size" placeholder="40">
-            <button class="left-aligment"></button>
-            <button class="center-alignment"></button>
-            <button class="right-aligment"></button>
-        </div>
-        <div class="text-color-editor editor">
-            <h3 class="editor-subtitle">COLOR</h3>
-            <input type="color" name="text-color" id="text-color">
-        </div>
-        <div class="background-color-editor editor">
-            <h3 class="editor-subtitle">FONDO</h3>
-            <input type="color" name="background-color" id="background-color">
-            <input type="checkbox" name="transparent-background" id="transparent-background">
-            <label for="transparent-background">Fondo transparente</label>
-        </div>
-        <div class="text-outline-editor editor">
-            <h3 class="editor-subtitle">CONTORNO</h3>
-            <button class="no-outline">NINGUNO</button>
-            <button class="light-outline">CLARO</button>
-            <button class="dark-outline">OSCURO</button>
-        </div>
-        <div class="line-height-editor editor">
-            <h3 class="editor-subtitle">ESPACIADO</h3>
-            <input type="number" name="text-line-height" id="text-line-height" placeholder="35">
-        </div>
-        <div class="text-spacing-editor editor">
-            <h3 class="editor-subtitle">INTERLINEADO</h3>
-            <input type="number" name="text-spacing" id="text-spacing" placeholder="1.2">
-        </div>
-    </aside>
-    <!-- Termina el aside de texto -->
+            <div class="background-color-editor editor">
+                <h3 class="editor-subtitle">FONDO</h3>
+                <input type="color" name="background-color" id="background-color">
+                <input type="checkbox" name="transparent-background" id="transparent-background">
+                <label for="transparent-background">Fondo transparente</label>
+            </div>
+            <div class="text-outline-editor editor">
+                <h3 class="editor-subtitle">CONTORNO</h3>
+                <button class="no-outline">NINGUNO</button>
+                <button class="light-outline">CLARO</button>
+                <button class="dark-outline">OSCURO</button>
+            </div>
+            <div class="line-height-editor editor">
+                <h3 class="editor-subtitle">ESPACIADO</h3>
+                <input type="number" name="text-line-height" id="text-line-height" placeholder="35">
+            </div>
+            <div class="text-spacing-editor editor">
+                <h3 class="editor-subtitle">INTERLINEADO</h3>
+                <input type="number" name="text-spacing" id="text-spacing" placeholder="1.2">
+            </div>
+        </aside>
+        <!-- Termina el aside de texto -->
+    </div>
 <script src="/editorDeMemes.js"></script>
 </body>
 </html>
