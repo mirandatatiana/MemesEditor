@@ -9,7 +9,31 @@
 /* Estilos del header */
 .header {
   background-color: #191e2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 15vh;
+}
+
+.main-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #393e49;
 }
 
 /* Estilos del main */
@@ -21,16 +45,14 @@
 /* Estilos de los dos aside */
 .aside {
   background-color: #252935;
-}
-
-/* Estilos del aside de imagen */
-.image-editor {
   height: 100vh;
   position: fixed;
   right: 0;
   top: 0;
   width: 270px;
 }
+
+/* Estilos del aside de imagen */
 
 /* Estilos del aside de texto */
 .text-editor {
