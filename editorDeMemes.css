@@ -64,6 +64,16 @@
   height: 400px;
 }
 
+.download {
+  background-color: #377d33;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
 /* Estilos de los dos aside */
 .aside {
   background-color: #252935;
