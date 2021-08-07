@@ -108,6 +108,50 @@
   border-radius: 3px;
 }
 
+.url-image {
+  border-radius: 5px;
+  border: rgb(43, 41, 41);
+  width: 100%;
+  height: 10px;
+  padding: 15px;
+  margin: 10px;
+  background-color: rgb(107, 105, 105)
+  
+}
+
+.url-image:hover {
+  background-color: rgb(122, 121, 121);
+}
+
+.filter-image {
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 15px;
+  color: white;
+  width: 100%;
+}
+
+.range-image {
+  height: 17px;
+  display: block;
+  width: 100%;
+}
+
+.reset-filters {
+  background-color: rgb(107, 105, 105);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin: 10px;
+}
+
+.reset-filters:hover {
+  background-color: rgb(122, 121, 121);
+}
+
 /* Estilos del aside de texto */
 .text-editor {
   display: none;

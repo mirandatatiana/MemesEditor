@@ -38,11 +38,11 @@
         <form action="" method="POST" class="image-form">
             <div class="url-editor editor">
                 <h3 class="editor-subtitle">URL</h3>
-                <input type="url" name="url" id="url" pattern="https://.*" required>
+                <input type="url" class="url-image" name="url" id="url" pattern="https://.*" required>
             </div>
             <div class="background-editor editor">
                 <h3 class="editor-subtitle">FONDO</h3>
-                <input type="color" class="input-control" name="color" id="color">
+                <input type="color"  name="color" id="color">
                 <select id="background">
                     <option value="none" id="none">Ninguno</option>
                     <option value="lighten" id="lighten">Aclarar</option>
@@ -54,35 +54,37 @@
             </div>
             <div class="filter-editor editor">
                 <h3 class="editor-subtitle">FILTROS</h3>
+            <div class="filter-image">
                 <label for="bright" id="brightness">BRILLO
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label> 
                 <label for="opacity" id="opacity">OPACIDAD
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="contrast" id="contrast">CONTRASTE
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="blur" id="blur">DESENFOQUE
-                    <input type="range">
+                    <input  class="range-image" type="range">
                 </label>
                 <label for="greyscale" id="greyscale">ESCALA DE GRISES
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="sepia" id="sepia">SEPIA
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="hue" id="hue">HUE
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="saturated" id="saturated">SATURADO
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
                 <label for="negative" id="negative">NEGATIVO
-                    <input type="range">
+                    <input class="range-image" type="range">
                 </label>
+            </div> 
             </div>
-            <input type="submit" name="reset-filters" id="reset-filters" value="Reestablecer filtros">
+            <input type="submit" class="reset-filters" name="reset-filters" id="reset-filters" value="Reestablecer filtros">
         </form>
     </aside>
     <!-- Termina el aside de imagen -->
