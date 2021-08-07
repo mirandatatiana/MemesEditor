@@ -74,6 +74,10 @@
   color: #fff;
 }
 
+.download:hover {
+  background-color: #245321;
+}
+
 /* Estilos de los dos aside */
 .aside {
   background-color: #252935;
