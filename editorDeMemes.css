@@ -90,6 +90,24 @@
 
 /* Estilos del aside de imagen */
 
+.editor-title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 25px;
+}
+
+.editor-subtitle {
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.input-control {
+  border-radius: 3px;
+}
+
 /* Estilos del aside de texto */
 .text-editor {
   display: none;
