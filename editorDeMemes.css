@@ -86,23 +86,52 @@
   right: 0;
   top: 0;
   width: 270px;
+  padding: 20px;
 }
-
-/* Estilos del aside de imagen */
 
 .editor-title {
   color: white;
   font-size: 20px;
   text-align: center;
-  padding: 25px;
+  margin-bottom: 20px;
 }
 
 .editor-subtitle {
   color: white;
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
+
+.editor {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  background-color: #393e49;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.full-width-form-control {
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: #fff;
+}
+
+.form-control:hover {
+  background-color: #494f5e;
+}
+
+label {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Estilos del aside de imagen */
 
 .input-control {
   border-radius: 3px;
@@ -115,8 +144,7 @@
   height: 10px;
   padding: 15px;
   margin: 10px;
-  background-color: rgb(107, 105, 105)
-  
+  background-color: rgb(107, 105, 105);
 }
 
 .url-image:hover {
@@ -153,6 +181,21 @@
 }
 
 /* Estilos del aside de texto */
-.text-editor {
-  display: none;
+
+.font-selection-form-control {
+  margin-bottom: 5px;
+}
+
+.font-size-form-control {
+  width: 122px;
+}
+
+.color-editor {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.color-editor-column {
+  width: 50%;
+  padding: 0 2px;
 }

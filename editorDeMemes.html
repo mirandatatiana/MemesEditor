@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Generador de Memes</title>
 </head>
 <body>
@@ -91,19 +92,21 @@
     <!-- Empieza el aside de texto -->
     <aside class="text-editor aside">
         <h2 class="editor-title">TEXTO</h2>
-        <div class="superior-text-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">SUPERIOR</h3>
-            <input type="checkbox" name="top-text-editor" id="top-text-editor" placeholder="TOP TEXT">
-            <label for="top-text-editor">Sin texto superior</label>
+            <textarea name="top-text-editor" id="top-text-editor" placeholder="TOP TEXT" class="form-control full-width-form-control"></textarea>
+            <input type="checkbox" name="no-top-text" id="no-top-text">
+            <label for="no-top-text">Sin texto superior</label>
         </div>
-        <div class="inferior-text-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">INFERIOR</h3>
-            <input type="checkbox" name="bottom-text-editor" id="bottom-text-editor" placeholder="BOTTOM TEXT">
-            <label for="bottom-text-editor">Sin texto inferior</label>
+            <textarea name="bottom-text-editor" id="bottom-text-editor" placeholder="BOTTOM TEXT" class="form-control full-width-form-control"></textarea>
+            <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
+            <label for="no-bottom-text">Sin texto inferior</label>
         </div>
-        <div class="font-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">FUENTE</h3>
-            <select id="font-selection">
+            <select id="font-selection" class="form-control full-width-form-control font-selection-form-control">
                 <option value="arial" id="arial">Arial</option>
                 <option value="arial-black" id="arial-black">Arial Black</option>
                 <option value="american-typewriter" id="american-typewriter">American Typewriter</option>
@@ -113,34 +116,51 @@
                 <option value="verdana" id="verdana">Verdana</option>
                 <option value="times-new-roman" id="times-new-roman">Times New Roman</option>    
             </select>
-            <input type="number" name="font-size" id="font-size" placeholder="40">
-            <button class="left-aligment"></button>
-            <button class="center-alignment"></button>
-            <button class="right-aligment"></button>
+            <input type="number" name="font-size" id="font-size" placeholder="40" class="form-control font-size-form-control">
+            <button id="left-aligment" class="form-control">
+                <i class="fas fa-align-left"></i>
+            </button>
+            <button id="center-alignment" class="form-control">
+                <i class="fas fa-align-center"></i>
+            </button>
+            <button id="right-aligment" class="form-control">
+                <i class="fas fa-align-right"></i>
+            </button>
         </div>
-        <div class="text-color-editor editor">
-            <h3 class="editor-subtitle">COLOR</h3>
-            <input type="color" name="text-color" id="text-color">
-        </div>
-        <div class="background-color-editor editor">
-            <h3 class="editor-subtitle">FONDO</h3>
-            <input type="color" name="background-color" id="background-color">
+        <div class="editor">
+            <div class="color-editor">
+                <div class="color-editor-column">
+                    <h3 class="editor-subtitle">COLOR</h3>
+                    <input type="color" name="text-color" id="text-color" value="#000000" class="form-control">
+                </div>
+                <div class="color-editor-column">
+                    <h3 class="editor-subtitle">FONDO</h3>
+                    <input type="color" name="background-color" id="background-color" value="#ffffff" class="form-control">
+                </div>
+            </div>
             <input type="checkbox" name="transparent-background" id="transparent-background">
             <label for="transparent-background">Fondo transparente</label>
         </div>
-        <div class="text-outline-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">CONTORNO</h3>
-            <button class="no-outline">NINGUNO</button>
-            <button class="light-outline">CLARO</button>
-            <button class="dark-outline">OSCURO</button>
+            <button id="no-outline" class="form-control">Ninguno</button>
+            <button id="light-outline" class="form-control">Claro</button>
+            <button id="dark-outline" class="form-control">Oscuro</button>
         </div>
-        <div class="line-height-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">ESPACIADO</h3>
-            <input type="number" name="text-line-height" id="text-line-height" placeholder="35">
+            <input type="number" name="padding" id="padding" placeholder="35" class="form-control full-width-form-control">
         </div>
-        <div class="text-spacing-editor editor">
+        <div class="editor">
             <h3 class="editor-subtitle">INTERLINEADO</h3>
-            <input type="number" name="text-spacing" id="text-spacing" placeholder="1.2">
+            <select id="line-height" class="form-control full-width-form-control">
+                <option value="0.8" id="cero-eight">0.8</option>
+                <option value="1" id="one">1</option>
+                <option value="1.2" id="one-two">1.2</option>
+                <option value="1.5" id="one-five">1.5</option>
+                <option value="2" id="two">2</option>
+                <option value="2.5" id="two-five">2.5</option>
+            </select>
         </div>
     </aside>
     <!-- Termina el aside de texto -->
