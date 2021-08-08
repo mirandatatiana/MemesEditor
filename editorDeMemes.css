@@ -1,0 +1,219 @@
+/* Estilos básicos */
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del header */
+.header {
+  background-color: #191e2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+}
+
+.main-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #393e49;
+}
+
+/* Estilos del main */
+.main-content {
+  background-color: #30343f;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meme-container {
+  width: 600px;
+  height: 600px;
+  text-align: center;
+}
+
+.meme-text {
+  background-color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.meme-image {
+  background-color: #000;
+  height: 400px;
+}
+
+.download {
+  background-color: #377d33;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.download:hover {
+  background-color: #245321;
+}
+
+/* Estilos de los dos aside */
+.aside {
+  background-color: #252935;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 270px;
+  padding: 20px;
+}
+
+.editor-title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.editor-subtitle {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.editor {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  background-color: #393e49;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.full-width-form-control {
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: #fff;
+}
+
+.form-control:hover {
+  background-color: #494f5e;
+}
+
+label {
+  color: #fff;
+  font-size: 14px;
+}
+
+input[type="color"] {
+  appearance: none;
+  height: 26px;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+}
+/* Estilos del aside de imagen */
+
+.input-control {
+  border-radius: 3px;
+}
+
+.url-image {
+  border-radius: 5px;
+  border: rgb(43, 41, 41);
+  width: 100%;
+  height: 10px;
+  padding: 15px;
+  margin: 10px;
+  background-color: rgb(107, 105, 105);
+}
+
+.url-image:hover {
+  background-color: rgb(122, 121, 121);
+}
+
+.filter-image {
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 15px;
+  color: white;
+  width: 100%;
+}
+
+.range-image {
+  height: 17px;
+  display: block;
+  width: 100%;
+}
+input[type="range"] {
+  appearance: none;
+  background-color: #393e49;
+  border-radius: 10px;
+  height: 5px;
+  margin: 15px 15px;
+}
+
+.reset-filters {
+  background-color: rgb(107, 105, 105);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin: 10px;
+}
+
+.reset-filters:hover {
+  background-color: rgb(122, 121, 121);
+}
+
+/* Estilos del aside de texto */
+
+.text-editor {
+  display: none;
+}
+
+.font-selection-form-control {
+  margin-bottom: 5px;
+}
+
+.font-size-form-control {
+  width: 122px;
+}
+
+.color-editor {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.color-editor-column {
+  width: 50%;
+  padding: 0 2px;
+}
