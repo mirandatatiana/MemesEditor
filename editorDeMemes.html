@@ -1,123 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="editorDeMemes.css">
     <link rel="stylesheet" href="editorDeMemes.js">
-    <title>Document</title>
+    <title>Generador de Memes</title>
 </head>
-
 <body>
+    <!-- Empieza el header -->
     <header>
-    <h1>Generador de Memes</h1>
-<div>
-    <button>Imagen</button>
-    <button>Texto</button>
-    <button>Modo Oscuro</button>
-</div>
-</header>
-<div >
-<!--caja del meme-->
+        <h1 class="main-title">Generador de memes</h1>
+        <div>
+            <button class="image-button">Imagen</button>
+            <button class="text-button">Texto</button>
+            <button class="dark-mode-button">Modo oscuro</button>
+        </div>
+    </header>
+    <!-- Termina el header -->
+    <!-- Empieza la caja del meme -->
+    <div class="meme-container">
+        <p class="meme-top-text">TOP TEXT</p>
+        <div class="meme-image"></div>
+        <p class="meme-bottom-text">BOTTOM TEXT</p>
+        <button class="download">Descargar meme</button>
+    </div>
+    <!-- Termina la caja del meme -->
+    <!-- Empieza el aside de imagen -->
+    <aside class="image-aside">
+        <h2 image-aside-title>IMAGEN</h2>
+        <form action="" method="get">
+            <div class="url-editor">
+                <label for="url">URL
+                <input type="url" name="url" id="url" pattern="https://.*" required>
+                </label>
+            </div>
+            <div class="background-editor">
+                <label for="">Fondo</label>
+                    <input type="color" name="" id="">
+                </label>
+                <label for="background">
+                    <select id="background">
+                        <option value="Ninguno">Ninguno</option>
+                        <option value="Aclara">Aclarar</option>
+                        <option value="Oscurecer">Oscurecer</option>
+                        <option value="Diferencia">Diferencia</option>
+                        <option value="Luminosidad">Luminosidad</option>
+                        <option value="Multiplicar">Multiplicar</option>    
+                    </select>
+                </label>
+            </div>
+            <div class="filter-editor">
+                <label for=""> BRILLO
+                    <input type="range">
+                </label> 
+                <label for=""> OPACIDAD
+                    <input type="range">
+                </label>
+                <label for=""> CONTRASTE
+                    <input type="range">
+                </label>
+                <label for=""> DESENFOQUE
+                    <input type="range">
+                </label>
+                <label for=""> ESCALA DE GRISES
+                    <input type="range">
+                </label>
+                <label for=""> SEPIA
+                    <input type="range">
+                </label>
+                <label for=""> HUE
+                    <input type="range">
+                </label>
+                <label for=""> SATURADO
+                    <input type="range">
+                </label>
+                <label for=""> NEGATIVO
+                    <input type="range">
+                </label>
+            </div>
+            <input type="submit" name="" id="" value="Reestablecer filtros">
+        </form>
+    </aside>
+    <!-- Termina el aside de imagen -->
+    <!-- Empieza el aside de texto -->
+    <aside class="text-aside">
+        <h2 text-aside-title>TEXTO</h2>
+        <div class="superior-text-editor">
+            <label for="">SUPERIOR
+                <input type="textarea" name="" id="">
+            </label>
+            <input type="checkbox" name="" id="" placeholder="TOP TEXT">
+            <label>Sin texto superior</label>
+        </div>
+        <div class="inferior-text-editor">
+            <label for="">INFERIOR
+                <input type="textarea" name="" id="">
+            </label>
+            <input type="checkbox" name="" id="" placeholder="BOTTOM TEXT">
+            <label>Sin texto inferior</label>
+        </div>
+        <div class="font-editor">
+            <h2 class="option-text-font">FUENTE</h2>
+            <select id="font-selection">
+                <option value="arial">Arial</option>
+                <option value="arial-black">Arial Black</option>
+                <option value="american-typewriter">American Typewriter</option>
+                <option value="comic-sans">Comic Sans MS</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="impact">Impact</option>
+                <option value="verdana">Verdana</option>
+                <option value="times-new-roman">Times New Roman</option>    
+            </select>
+            <input type="number" name="number" id="number" placeholder="40">
+            <button class="left"></button>
+            <button class="center"></button>
+            <button class="right"></button>
+        </div>
 
-</div>
-<aside class="imagen">
-<!--aside-->
-<h2>Imagen</h2>
+            
+        <div class="text-colour">
+            <h3 class="colour-text">COLOR</h3>
+            <input type="colour" name="" id="">
+        </div>
 
-    <form action="" method="get">
-<div>
-<label for="url">URL
-<input type="url" name="url" id="url" pattern="https://.*" required>
-</label>
-</div>
-<div>
-    <label for="">fondo</label>
-    <input type="color" name="" id="">
-    <label for="background"></label>
-    <select id="background">
-    <option value="Ninguno">Ninguno</option>
-    <option value="Aclara">Aclara</option>
-    <option value="Oscurecer">Oscurecer</option>
-    <option value="Diferencia">Diferencia</option>
-    <option value="Luminosidad">Luminosidad</option>
-    <option value="Multiplicar">Multiplicar</option>    
-</select>
-</label>
-</div>
-<div>
-<label for="">BRILLO
-<input type="range">
-</label> 
-<label for=""> OPACIDAD
-<input type="range">
-</label>
-<label for=""> CONTRASTE
-<input type="range">
-</label>
-<label for=""> DESENFOQUE
-<input type="range">
-</label>
-<label for=""> ESCALA DE GRISES
-<input type="range">
-</label>
-<label for=""> SEPIA    
-<input type="range">
-</label>
-<label for=""> HUE
-<input type="range">
-</label>
-<label for=""> SATURADO
-<input type="range">
-</label>
-<label for=""> NEGATIVO
-<input type="range">
-</label>
-<input type="submit" name="" id="" value="Reestablecer Filtros">
-</div>
-</form>
-</aside>
-<aside class="texto">
-<h2>TEXTO</h2>
-<form action="">
-<label for="">Superior
-    <input type="textarea" name="" id="">
-   <input type="checkbox" name="" id="" placeholder="TOP TEXT">
-   <label> Sin texto superior </label>
-</label>
-<label for="">INFERIOR
-    <input type="textarea" name="" id="">
-   <input type="checkbox" name="" id="" placeholder="BUTTOM TEXT">
-   <label>Sin texto inferior </label>
-</label>
-<select name="" id="">
-    <option value="Arial">Ninguno</option>
-    <option value="Arial Black">Aclara</option>
-    <option value=" American Typewriter">Oscurecer</option>
-    <option value="Andale Mono">Diferencia</option>
-    <option value="Comic Sans MS">Luminosidad</option>
-    <option value="Helvetica">Multiplicar</option>
-    <option value="Impact">Impact</option> 
-    <option value="Verdana">Verdana</option>
-    <option value="Times New Roman">Times New Roman</option>   
-</select>
-<input type="number" min="12" max="2000">
-<button type="button"></button>
-<button type="button"></button>
-<button type="button"></button>
-<div>
-<label for="">COLOR
-<input type="color" name="" id="">
-</label>
-<label for="">FONDO
-<input type="color">
-</label>
-<input type="checkbox" name="" id="">
+        <div class="background-text">
+            <h3 class="background">FONDO</h3>
+            <input type="color" name="" id="">
+            <input type="checkbox" name="" id="">
+            <label>Fondo transparente</label>
+        </div>
 
-</div>
-</form>
-</aside>
+        <div class="contour-text">
+            <h3 class="contour">CONTORNO</h3>
+            <button class="button-none">NINGUNO</button>
+            <button class="button-light">CLARO</button>
+            <button class="button-dark">OSCURO</button>
+        </div>
+
+        <div class="spacing-text">
+            <h3 class="spacing">ESPACIADO</h3>
+            <input type="number" name="number" id="number" placeholder="35">
+        </div>
+
+        <div class="interlined-text">
+            <h3 class="interlined">INTERLINEADO</h3>
+            <input type="number" name="number" id="number" placeholder="1.2">
+        </div>
+
+    </aside>
+
+        
+
     <script src="/editorDeMemes.js"></script>
 </body>
 </html>
