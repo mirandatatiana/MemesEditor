@@ -182,6 +182,10 @@ label {
 
 /* Estilos del aside de texto */
 
+.text-editor {
+  display: none;
+}
+
 .font-selection-form-control {
   margin-bottom: 5px;
 }
