@@ -19,6 +19,8 @@ const fontSizeInput = document.querySelector("#font-size");
 const leftAlignmentButton = document.querySelector("#left-alignment");
 const centerAlignmentButton = document.querySelector("#center-alignment");
 const rightAlignmentButton = document.querySelector("#right-alignment");
+const textColorInput = document.querySelector("#text-color");
+const backgroundColorInput = document.querySelector("#background-color");
 
 // Boton para que se vea el aside de texto
 
@@ -109,4 +111,16 @@ centerAlignmentButton.onclick = () => {
 rightAlignmentButton.onclick = () => {
     memeTopText.style.textAlign = "right";
     memeBottomText.style.textAlign = "right";
+}
+
+// Input para cambiar colores de la tipografía y del fondo
+
+textColorInput.oninput = () => {
+    memeTopText.style.color = textColorInput.value;
+    memeBottomText.style.color = textColorInput.value;
+}
+
+backgroundColorInput.oninput = () => {
+    memeTopText.style.backgroundColor = backgroundColorInput.value;
+    memeBottomText.style.backgroundColor = backgroundColorInput.value;
 }
