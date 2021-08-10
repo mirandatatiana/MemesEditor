@@ -21,6 +21,7 @@ const centerAlignmentButton = document.querySelector("#center-alignment");
 const rightAlignmentButton = document.querySelector("#right-alignment");
 const textColorInput = document.querySelector("#text-color");
 const backgroundColorInput = document.querySelector("#background-color");
+const transparentBackgroundCheckbox = document.querySelector("#transparent-background");
 
 // Boton para que se vea el aside de texto
 
@@ -123,4 +124,11 @@ textColorInput.oninput = () => {
 backgroundColorInput.oninput = () => {
     memeTopText.style.backgroundColor = backgroundColorInput.value;
     memeBottomText.style.backgroundColor = backgroundColorInput.value;
+}
+
+// Checkbox para que el color de fondo sea transparente
+
+transparentBackgroundCheckbox.onclick = () => {
+    memeTopText.classList.toggle("transparent");
+    memeBottomText.classList.toggle("transparent");
 }
