@@ -20,7 +20,7 @@
     />
     <title>Generador de Memes</title>
   </head>
-  <body>
+  <body class="container-mode">
     <!-- Empieza el header -->
     <header class="header">
       <h1 class="main-title">Generador de memes</h1>
@@ -31,7 +31,7 @@
         <button id="text-button" class="button">
           <i class="fas fa-font"></i> Texto
         </button>
-        <button id="dark-mode-button" class="button">
+        <button id="dark-mode-button dark-mode" class="button darkbutton">
           <i class="far fa-lightbulb"></i> Modo oscuro
         </button>
       </div>
@@ -241,7 +241,10 @@
       </div>
       <div class="editor">
         <h3 class="editor-subtitle">INTERLINEADO</h3>
-        <select id="line-height" class="form-control full-width-form-control">
+        <select
+          id="line-height"
+          class="form-control full-width-form-control interlineal"
+        >
           <option value="0.8" id="cero-eight">0.8</option>
           <option value="1" id="one">1</option>
           <option value="1.2" id="one-two">1.2</option>
@@ -252,6 +255,6 @@
       </div>
     </aside>
     <!-- Termina el aside de texto -->
-    <script src="/editorDeMemes.js"></script>
   </body>
+  <script src="editorDeMemes.js"></script>
 </html>
