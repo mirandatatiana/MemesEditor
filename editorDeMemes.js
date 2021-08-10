@@ -15,6 +15,7 @@ const helveticaFont = document.querySelector("#helvetica");
 const impactFont = document.querySelector("#impact");
 const verdanaFont = document.querySelector("#verdana");
 const timesNewRomanFont = document.querySelector("#times-new-roman");
+const fontSizeInput = document.querySelector("#font-size");
 
 // Boton para que se vea el aside de texto
 
@@ -81,4 +82,11 @@ fontSelection.onchange = () => {
         memeTopText.style.fontFamily = "Times New Roman";
         memeBottomText.style.fontFamily = "Times New Roman";
     }
+}
+
+// Input que modifica el tamaño de la tipografía del meme
+
+fontSizeInput.oninput = () => {
+    memeTopText.style.fontSize = `${fontSizeInput.value}px`;
+    memeBottomText.style.fontSize = `${fontSizeInput.value}px`;
 }
