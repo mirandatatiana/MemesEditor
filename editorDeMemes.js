@@ -16,6 +16,9 @@ const impactFont = document.querySelector("#impact");
 const verdanaFont = document.querySelector("#verdana");
 const timesNewRomanFont = document.querySelector("#times-new-roman");
 const fontSizeInput = document.querySelector("#font-size");
+const leftAlignmentButton = document.querySelector("#left-alignment");
+const centerAlignmentButton = document.querySelector("#center-alignment");
+const rightAlignmentButton = document.querySelector("#right-alignment");
 
 // Boton para que se vea el aside de texto
 
@@ -89,4 +92,21 @@ fontSelection.onchange = () => {
 fontSizeInput.oninput = () => {
     memeTopText.style.fontSize = `${fontSizeInput.value}px`;
     memeBottomText.style.fontSize = `${fontSizeInput.value}px`;
+}
+
+// Botones para cambiar el alineamiento del texto del meme
+
+leftAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "left";
+    memeBottomText.style.textAlign = "left";
+}
+
+centerAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "center";
+    memeBottomText.style.textAlign = "center";
+}
+
+rightAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "right";
+    memeBottomText.style.textAlign = "right";
 }
