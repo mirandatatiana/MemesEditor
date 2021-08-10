@@ -19,7 +19,7 @@ memeTopTextEditor.oninput = () => {
     memeTopText.textContent = memeTopTextEditor.value;
 }
 
-// Checkbox para eliminar el texto superior del meme
+// Checkbox para eliminar el texto superior del mem
 
 topTextCheckbox.onclick = () => {
     memeTopText.classList.toggle("hide");
