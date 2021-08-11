@@ -22,6 +22,9 @@ const rightAlignmentButton = document.querySelector("#right-alignment");
 const textColorInput = document.querySelector("#text-color");
 const backgroundColorInput = document.querySelector("#background-color");
 const transparentBackgroundCheckbox = document.querySelector("#transparent-background");
+const noOutlineButton = document.querySelector("#no-outline");
+const lightOutlineButton = document.querySelector("#light-outline");
+const darkOutlineButton = document.querySelector("#dark-outline");
 
 // Boton para que se vea el aside de texto
 
@@ -131,4 +134,21 @@ backgroundColorInput.oninput = () => {
 transparentBackgroundCheckbox.onclick = () => {
     memeTopText.classList.toggle("transparent");
     memeBottomText.classList.toggle("transparent");
+}
+
+// Botones para agregar contorno al texto
+
+noOutlineButton.onclick = () => {
+    memeTopText.style.textShadow = "none";
+    memeBottomText.style.textShadow = "none";
+}
+
+lightOutlineButton.onclick = () => {
+    memeTopText.style.textShadow = "2px 2px #fff";
+    memeBottomText.style.textShadow = "2px 2px #fff";
+}
+
+darkOutlineButton.onclick = () => {
+    memeTopText.style.textShadow = "2px 2px #000";
+    memeBottomText.style.textShadow = "2px 2px #000";
 }
