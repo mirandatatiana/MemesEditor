@@ -26,6 +26,13 @@ const noOutlineButton = document.querySelector("#no-outline");
 const lightOutlineButton = document.querySelector("#light-outline");
 const darkOutlineButton = document.querySelector("#dark-outline");
 const paddingInput = document.querySelector("#padding");
+const lineHeightSelection = document.querySelector("#line-height");
+const lineHeightCeroEight = document.querySelector("#cero-eight");
+const lineHeightOne = document.querySelector("#one");
+const lineHeightOneTwo = document.querySelector("#one-two");
+const lineHeightOneFive = document.querySelector("#one-five");
+const lineHeightTwo = document.querySelector("#two");
+const lineHeightTwoFive = document.querySelector("#two-five");
 
 // Boton para que se vea el aside de texto
 
@@ -160,4 +167,33 @@ darkOutlineButton.onclick = () => {
 paddingInput.oninput = () => {
     memeTopText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
     memeBottomText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
+}
+
+// Selector de interlineado de texto
+
+lineHeightSelection.onchange = () => {
+    if (lineHeightSelection.value === "0.8") {
+        memeTopText.style.lineHeight = "0.8";
+        memeBottomText.style.lineHeight = "0.8";
+    }
+    else if (lineHeightSelection.value === "1") {
+        memeTopText.style.lineHeight = "1";
+        memeBottomText.style.lineHeight = "1";
+    }
+    else if (lineHeightSelection.value === "1.2") {
+        memeTopText.style.lineHeight = "1.2";
+        memeBottomText.style.lineHeight = "1.2";
+    }
+    else if (lineHeightSelection.value === "1.5") {
+        memeTopText.style.lineHeight = "1.5";
+        memeBottomText.style.lineHeight = "1.5";
+    }
+    else if (lineHeightSelection.value === "2") {
+        memeTopText.style.lineHeight = "2";
+        memeBottomText.style.lineHeight = "2";
+    }
+    else if (lineHeightSelection.value === "2.5") {
+        memeTopText.style.lineHeight = "2.5";
+        memeBottomText.style.lineHeight = "2.5";
+    }
 }
