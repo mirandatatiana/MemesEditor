@@ -25,6 +25,7 @@ const transparentBackgroundCheckbox = document.querySelector("#transparent-backg
 const noOutlineButton = document.querySelector("#no-outline");
 const lightOutlineButton = document.querySelector("#light-outline");
 const darkOutlineButton = document.querySelector("#dark-outline");
+const paddingInput = document.querySelector("#padding");
 
 // Boton para que se vea el aside de texto
 
@@ -151,4 +152,12 @@ lightOutlineButton.onclick = () => {
 darkOutlineButton.onclick = () => {
     memeTopText.style.textShadow = "2px 2px #000";
     memeBottomText.style.textShadow = "2px 2px #000";
+}
+
+// Input para cambiar el padding del texto
+// Falta lograr que el contenedor del meme no se agrande
+
+paddingInput.oninput = () => {
+    memeTopText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
+    memeBottomText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
 }
