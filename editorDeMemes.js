@@ -1,5 +1,3 @@
-console.log('hola mundo')
-
 // Modo oscuro
 
 const containerMode = document.querySelector(".container-mode")
@@ -220,9 +218,19 @@ lineHeightSelection.onchange = () => {
 // Editor de imagen
 
 const imageEditorButton = document.getElementById("image-button");
+const imageUrlInput = document.querySelector(".url-image");
+const memeImage = document.querySelector(".meme-image");
+
+// Boton para que se vea el aside de imagen
 
 imageEditorButton.onclick = () => {
     textEditorAside.style.display = "none";
+}
+
+// Input para agregar la url de la imagen
+
+imageUrlInput.onchange = () => {
+    memeImage.style.backgroundImage = `url("${imageUrlInput.value}")`;
 }
 
 // //input filtros
