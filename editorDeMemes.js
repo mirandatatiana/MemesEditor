@@ -1,5 +1,3 @@
-console.log('hola')
-
 // Modo oscuro
 
 const containerMode = document.querySelector(".container-mode")
