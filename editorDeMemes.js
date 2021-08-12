@@ -217,61 +217,67 @@ lineHeightSelection.onchange = () => {
 }
 
 
-// Editor Imagen
+// Editor de imagen
 
-//input filtros
+const imageEditorButton = document.getElementById("image-button");
 
-const brillo = document.querySelector ('#brightness');
-const opacidad = document.querySelector ('#opacity');
-const contraste = document.querySelector ('#contrast');
-const desenfoque = document.querySelector ('#blur');
-const escalaDeGrises = document.querySelector ('#greyscale');
-const sepia = document.querySelector ('#sepia');
-const hue = document.querySelector ('#hue');
-const saturado = document.querySelector ('#saturated');
-const negativo = document.querySelector ('#negative');
-const restablecerFiltros = document.querySelector ('#resetFilters');
+imageEditorButton.onclick = () => {
+    textEditorAside.style.display = "none";
+}
 
-//actualizar Filtros
+// //input filtros
 
-const actualizarFiltros = () => {
-    imageMeme.style.filter = `brightness(${brillo.value}); 
-    opacity(${opacidad.value});
-    contrast(${contraste.value}); 
-     blur(${desenfoque.value});
-     grayscale(${escalaDeGrises.value}); 
-     sepia(${sepia.value});
-     hue(${hue.value};
-     saturated(${saturado.value}); 
-     negative(${negativo.value})`
-};
+// const brillo = document.querySelector ('#brightness');
+// const opacidad = document.querySelector ('#opacity');
+// const contraste = document.querySelector ('#contrast');
+// const desenfoque = document.querySelector ('#blur');
+// const escalaDeGrises = document.querySelector ('#greyscale');
+// const sepia = document.querySelector ('#sepia');
+// const hue = document.querySelector ('#hue');
+// const saturado = document.querySelector ('#saturated');
+// const negativo = document.querySelector ('#negative');
+// const restablecerFiltros = document.querySelector ('#resetFilters');
 
+// //actualizar Filtros
 
-brightness.addEventListener('onchange', actualizarFiltros); 
-opacity.addEventListener('onchange', actualizarFiltros);
-contrast.addEventListener('onchange', actualizarFiltros);
-blurFilter.addEventListener('onchange', actualizarFiltros);
-greyscale.addEventListener('onchange', actualizarFiltros);
-sepia.addEventListener('onchange', actualizarFiltros);
-hue.addEventListener('onchange', actualizarFiltros);
-saturated.addEventListener('onchange', actualizarFiltros);
-negative.addEventListener('onchange', actualizarFiltros);
+// const actualizarFiltros = () => {
+//     imageMeme.style.filter = `brightness(${brillo.value}); 
+//     opacity(${opacidad.value});
+//     contrast(${contraste.value}); 
+//      blur(${desenfoque.value});
+//      grayscale(${escalaDeGrises.value}); 
+//      sepia(${sepia.value});
+//      hue(${hue.value};
+//      saturated(${saturado.value}); 
+//      negative(${negativo.value})`
+// };
 
 
-//restablecer filtros 
+// brightness.addEventListener('onchange', actualizarFiltros); 
+// opacity.addEventListener('onchange', actualizarFiltros);
+// contrast.addEventListener('onchange', actualizarFiltros);
+// blurFilter.addEventListener('onchange', actualizarFiltros);
+// greyscale.addEventListener('onchange', actualizarFiltros);
+// sepia.addEventListener('onchange', actualizarFiltros);
+// hue.addEventListener('onchange', actualizarFiltros);
+// saturated.addEventListener('onchange', actualizarFiltros);
+// negative.addEventListener('onchange', actualizarFiltros);
 
-const buttonFilters = document.getElementById("resetFilters");
-const resetFilters = () => {
-    brillo.value = 1;
-    opacidad.value = 1;
-    contraste.value = 100;
-    desenfoque.value = 0;
-    escalaDeGrises.value = 0;
-    sepia.value = 0;
-    hue.value = 0;
-    saturado.value = 100;
-    negativo.value = 0;
-};
+
+// //restablecer filtros 
+
+// const buttonFilters = document.getElementById("resetFilters");
+// const resetFilters = () => {
+//     brillo.value = 1;
+//     opacidad.value = 1;
+//     contraste.value = 100;
+//     desenfoque.value = 0;
+//     escalaDeGrises.value = 0;
+//     sepia.value = 0;
+//     hue.value = 0;
+//     saturado.value = 100;
+//     negativo.value = 0;
+// };
 
 
 
