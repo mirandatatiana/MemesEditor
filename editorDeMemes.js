@@ -1,3 +1,5 @@
+console.log('hola mundo')
+
 // Modo oscuro
 
 const containerMode = document.querySelector(".container-mode")
@@ -231,6 +233,7 @@ const negativo = document.querySelector ('#negative');
 const restablecerFiltros = document.querySelector ('#resetFilters');
 
 //actualizar Filtros
+
 const actualizarFiltros = () => {
     imageMeme.style.filter = `brightness(${brillo.value}); 
     opacity(${opacidad.value});
@@ -238,21 +241,22 @@ const actualizarFiltros = () => {
      blur(${desenfoque.value});
      grayscale(${escalaDeGrises.value}); 
      sepia(${sepia.value});
-     hue(${hue.value});
+     hue(${hue.value};
      saturated(${saturado.value}); 
      negative(${negativo.value})`
 };
 
 
-brightness.addEventListener('input', actualizarFiltros); 
-opacity.addEventListener('input', actualizarFiltros);
-contrast.addEventListener('input', actualizarFiltros);
-blurFilter.addEventListener('input', actualizarFiltros);
-greyscale.addEventListener('input', actualizarFiltros);
-sepia.addEventListener('input', actualizarFiltros);
-hue.addEventListener('input', actualizarFiltros);
-saturated.addEventListener('input', actualizarFiltros);
-negative.addEventListener('input', actualizarFiltros);
+brightness.addEventListener('onchange', actualizarFiltros); 
+opacity.addEventListener('onchange', actualizarFiltros);
+contrast.addEventListener('onchange', actualizarFiltros);
+blurFilter.addEventListener('onchange', actualizarFiltros);
+greyscale.addEventListener('onchange', actualizarFiltros);
+sepia.addEventListener('onchange', actualizarFiltros);
+hue.addEventListener('onchange', actualizarFiltros);
+saturated.addEventListener('onchange', actualizarFiltros);
+negative.addEventListener('onchange', actualizarFiltros);
+
 
 //restablecer filtros 
 
