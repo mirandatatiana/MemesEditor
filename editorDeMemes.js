@@ -268,7 +268,6 @@ const resetFilters = () => {
     saturado.value = 100;
     negativo.value = 0;
 };
-botonRestablecer.addEventListener("click", resetFiltros);
 
 
 
