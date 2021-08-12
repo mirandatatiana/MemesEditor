@@ -219,30 +219,30 @@ lineHeightSelection.onchange = () => {
 
 //input filtros
 
-const brillo = document.querySelector ('brightness');
-const opacidad = document.querySelector ('opacity');
-const contraste = document.querySelector ('contrast');
-const desenfoque = document.querySelector ('blur');
-const escalaDeGrises = document.querySelector ('greyscale');
-const sepia = document.querySelector ('sepia');
-const hue = document.querySelector ('hue');
-const saturado = document.querySelector ('saturated');
-const negativo = document.querySelector ('negative');
-const restablecerFiltros = document.querySelector ('resetFilters');
+const brillo = document.querySelector ('#brightness');
+const opacidad = document.querySelector ('#opacity');
+const contraste = document.querySelector ('#contrast');
+const desenfoque = document.querySelector ('#blur');
+const escalaDeGrises = document.querySelector ('#greyscale');
+const sepia = document.querySelector ('#sepia');
+const hue = document.querySelector ('#hue');
+const saturado = document.querySelector ('#saturated');
+const negativo = document.querySelector ('#negative');
+const restablecerFiltros = document.querySelector ('#resetFilters');
 
 //actualizar Filtros
-
 const actualizarFiltros = () => {
-    imageMeme.style.filter = `brightness('${brillo.value}'); 
-    opacity('${opacidad.value}');
-    contrast('${contraste.value}'); 
-     blur('${desenfoque.value}');
-     grayscale('${escalaDeGrises.value}'); 
-     sepia('${sepia.value}');
-     hue('${hue.value}');
-     saturated('${saturado.value}'); 
-     negative('${negativo.value}')`
-}
+    imageMeme.style.filter = `brightness(${brillo.value}); 
+    opacity(${opacidad.value});
+    contrast(${contraste.value}); 
+     blur(${desenfoque.value});
+     grayscale(${escalaDeGrises.value}); 
+     sepia(${sepia.value});
+     hue(${hue.value});
+     saturated(${saturado.value}); 
+     negative(${negativo.value})`
+};
+
 
 brightness.addEventListener('input', actualizarFiltros); 
 opacity.addEventListener('input', actualizarFiltros);
