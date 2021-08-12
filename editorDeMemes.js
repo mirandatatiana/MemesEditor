@@ -222,6 +222,16 @@ const imageUrlInput = document.querySelector(".url-image");
 const memeImage = document.querySelector(".meme-image");
 const imageBackgroundColorInput = document.querySelector("#color");
 const imageBackgroundColorValue = document.querySelector("#color-value");
+const brightnessInput = document.querySelector("#brightness");
+const opacityInput = document.querySelector("#opacity");
+const contrastInput = document.querySelector("#contrast");
+const blurInput = document.querySelector("#blur");
+const greyScaleInput = document.querySelector("#greyscale");
+const sepiaInput = document.querySelector("#sepia");
+const hueInput = document.querySelector("#hue");
+const saturatedInput = document.querySelector("#saturated");
+const negativeInput = document.querySelector("#negative");
+const resetFiltersButton = document.getElementById("#reset-filters");
 
 // Boton para que se vea el aside de imagen
 
@@ -242,20 +252,18 @@ imageBackgroundColorInput.oninput = () => {
     imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
 }
 
-// //input filtros
+// Falta la funcion para cambiar estilos del fondo
 
-// const brillo = document.querySelector ('#brightness');
-// const opacidad = document.querySelector ('#opacity');
-// const contraste = document.querySelector ('#contrast');
-// const desenfoque = document.querySelector ('#blur');
-// const escalaDeGrises = document.querySelector ('#greyscale');
-// const sepia = document.querySelector ('#sepia');
-// const hue = document.querySelector ('#hue');
-// const saturado = document.querySelector ('#saturated');
-// const negativo = document.querySelector ('#negative');
-// const restablecerFiltros = document.querySelector ('#resetFilters');
+// Inputs para cambiar filtros de la imagen
+// Hay que corregir algo en la función porque no se está ejecutando
 
-// //actualizar Filtros
+const applyFilter = () => {
+    console.log("hola");
+}
+
+brightnessInput.addEventListener("oninput", applyFilter);
+
+// Aplicar filtros
 
 // const actualizarFiltros = () => {
 //     imageMeme.style.filter = `brightness(${brillo.value}); 
@@ -267,7 +275,7 @@ imageBackgroundColorInput.oninput = () => {
 //      hue(${hue.value};
 //      saturated(${saturado.value}); 
 //      negative(${negativo.value})`
-// };
+// }
 
 
 // brightness.addEventListener('onchange', actualizarFiltros); 
@@ -281,20 +289,19 @@ imageBackgroundColorInput.oninput = () => {
 // negative.addEventListener('onchange', actualizarFiltros);
 
 
-// //restablecer filtros 
+// Reestablecer filtros 
 
-// const buttonFilters = document.getElementById("resetFilters");
-// const resetFilters = () => {
-//     brillo.value = 1;
-//     opacidad.value = 1;
-//     contraste.value = 100;
-//     desenfoque.value = 0;
-//     escalaDeGrises.value = 0;
-//     sepia.value = 0;
-//     hue.value = 0;
-//     saturado.value = 100;
-//     negativo.value = 0;
-// };
+// resetFiltersButton.onclick = () => {
+//     // brightnessInput.value = 1;
+//     // opacityInput.value = 1;
+//     // contrastInput.value = 100;
+//     // blurInput.value = 0;
+//     // greyScaleInput.value = 0;
+//     // sepiaInput.value = 0;
+//     // hueInput.value = 0;
+//     // saturatedInput.value = 100;
+//     // negativeInput.value = 0;
+// }
 
 
 
