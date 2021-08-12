@@ -8,3 +8,22 @@ const changeMode = () => {
 
 }
 buttonDarkMode.onclick = changeMode
+
+
+const urlImg = document.querySelector('.urlImg')
+const imgMeme = document.querySelector('.meme-image')
+
+
+
+
+urlImg.onchange = () => {
+    imgMeme.style.backgroundImage = `url("${urlImg.value}")`
+
+}
+
+const botonFondoImagen = document.querySelector('.bkImg');
+
+botonFondoImagen.oninput = () => {
+    imgMeme.style.backgroundColor = botonFondoImagen.value;
+
+}
