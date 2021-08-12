@@ -220,6 +220,8 @@ lineHeightSelection.onchange = () => {
 const imageEditorButton = document.getElementById("image-button");
 const imageUrlInput = document.querySelector(".url-image");
 const memeImage = document.querySelector(".meme-image");
+const imageBackgroundColorInput = document.querySelector("#color");
+const imageBackgroundColorValue = document.querySelector("#color-value");
 
 // Boton para que se vea el aside de imagen
 
@@ -231,6 +233,13 @@ imageEditorButton.onclick = () => {
 
 imageUrlInput.onchange = () => {
     memeImage.style.backgroundImage = `url("${imageUrlInput.value}")`;
+}
+
+// Input para cambiar el color de fondo de la imagen
+
+imageBackgroundColorInput.oninput = () => {
+    memeImage.style.backgroundColor = imageBackgroundColorInput.value;
+    imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
 }
 
 // //input filtros
