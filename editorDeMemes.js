@@ -1,3 +1,5 @@
+console.log('hola')
+
 // Modo oscuro
 
 const containerMode = document.querySelector(".container-mode")
@@ -213,3 +215,65 @@ lineHeightSelection.onchange = () => {
         memeBottomText.style.lineHeight = "2.5";
     }
 }
+
+
+// Editor Imagen
+
+//input filtros
+
+const brillo = document.querySelector ('brightness');
+const opacidad = document.querySelector ('opacity');
+const contraste = document.querySelector ('contrast');
+const desenfoque = document.querySelector ('blur');
+const escalaDeGrises = document.querySelector ('greyscale');
+const sepia = document.querySelector ('sepia');
+const hue = document.querySelector ('hue');
+const saturado = document.querySelector ('saturated');
+const negativo = document.querySelector ('negative');
+const restablecerFiltros = document.querySelector ('resetFilters');
+
+//actualizar Filtros
+
+const actualizarFiltros = () => {
+    imageMeme.style.filter = `brightness('${brillo.value}'); 
+    opacity('${opacidad.value}');
+    contrast('${contraste.value}'); 
+     blur('${desenfoque.value}');
+     grayscale('${escalaDeGrises.value}'); 
+     sepia('${sepia.value}');
+     hue('${hue.value}');
+     saturated('${saturado.value}'); 
+     negative('${negativo.value}')`
+}
+
+brightness.addEventListener('input', actualizarFiltros); 
+opacity.addEventListener('input', actualizarFiltros);
+contrast.addEventListener('input', actualizarFiltros);
+blurFilter.addEventListener('input', actualizarFiltros);
+greyscale.addEventListener('input', actualizarFiltros);
+sepia.addEventListener('input', actualizarFiltros);
+hue.addEventListener('input', actualizarFiltros);
+saturated.addEventListener('input', actualizarFiltros);
+negative.addEventListener('input', actualizarFiltros);
+
+//restablecer filtros 
+
+const buttonFilters = document.getElementById("resetFilters");
+const resetFilters = () => {
+    brillo.value = 1;
+    opacidad.value = 1;
+    contraste.value = 100;
+    desenfoque.value = 0;
+    escalaDeGrises.value = 0;
+    sepia.value = 0;
+    hue.value = 0;
+    saturado.value = 100;
+    negativo.value = 0;
+};
+botonRestablecer.addEventListener("click", resetFiltros);
+
+
+
+
+
+
