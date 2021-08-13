@@ -80,39 +80,39 @@
           <div class="filter-image">
             <label for="bright" id="brightness "
               >BRILLO
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="0" max="10" value="1"/>
             </label>
             <label for="opacity" id="opacity"
               >OPACIDAD
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="0" max="10" value="1" />
             </label>
             <label for="contrast" id="contrast"
               >CONTRASTE
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="0" max="1000" value="100" />
             </label>
-            <label for="blur" id="blur"
+            <label for="blur-filter" id="blur-filter"
               >DESENFOQUE
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range"  min="0" max="10" value="0"/>
             </label>
             <label for="greyscale" id="greyscale"
               >ESCALA DE GRISES
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range"  min="0" max="100" value="0" />
             </label>
             <label for="sepia" id="sepia"
               >SEPIA
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="0" max="100" value="0" />
             </label>
             <label for="hue" id="hue"
               >HUE
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range"  min="0" max="100" value="0" />
             </label>
             <label for="saturated" id="saturated"
               >SATURADO
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="100" max="1000" value="100" />
             </label>
             <label for="negative" id="negative"
               >NEGATIVO
-              <input class="range-image form-control" type="range" />
+              <input class="range-image form-control" type="range" min="100" max="1000" value="100" />
             </label>
           </div>
         </div>
@@ -168,7 +168,7 @@
           </option>
           <option value="comic-sans" id="comic-sans">Comic Sans MS</option>
           <option value="helvetica" id="helvetica">Helvetica</option>
-          <option value="impact" id="impact">Impact</option>
+          <option value="impact" id="impact" selected>Impact</option>
           <option value="verdana" id="verdana">Verdana</option>
           <option value="times-new-roman" id="times-new-roman">
             Times New Roman
@@ -179,15 +179,16 @@
           name="font-size"
           id="font-size"
           placeholder="40"
+          min="12"
           class="form-control font-size-form-control"
         />
-        <button id="left-aligment" class="form-control">
+        <button id="left-alignment" class="form-control">
           <i class="fas fa-align-left"></i>
         </button>
         <button id="center-alignment" class="form-control">
           <i class="fas fa-align-center"></i>
         </button>
-        <button id="right-aligment" class="form-control">
+        <button id="right-alignment" class="form-control">
           <i class="fas fa-align-right"></i>
         </button>
       </div>
@@ -233,6 +234,8 @@
           type="number"
           name="padding"
           id="padding"
+          min="10"
+          max="50"
           placeholder="35"
           class="form-control full-width-form-control"
         />
@@ -245,7 +248,7 @@
         >
           <option value="0.8" id="cero-eight">0.8</option>
           <option value="1" id="one">1</option>
-          <option value="1.2" id="one-two">1.2</option>
+          <option value="1.2" id="one-two" selected>1.2</option>
           <option value="1.5" id="one-five">1.5</option>
           <option value="2" id="two">2</option>
           <option value="2.5" id="two-five">2.5</option>
@@ -255,5 +258,4 @@
     <!-- Termina el aside de texto -->
     <script src="editorDeMemes.js"></script>
   </body>
-  <script src="editorDeMemes.js"></script>
 </html>
