@@ -303,9 +303,7 @@ brightnessInput.addEventListener("oninput", applyFilter);
 //     // negativeInput.value = 0;
 // }
 
-// Probando clave ssh (cande)
-
-
+// Probando clave ssh
 
 
 
