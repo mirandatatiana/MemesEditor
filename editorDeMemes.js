@@ -164,7 +164,7 @@ botonFondoImagen.oninput = () => {
 // Aplicar filtros
 
 const actualizarFiltros = () => {
-    memeImage.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${greyScaleInput.value}%) sepia(${sepiaInput.value}%) hue(${hueInput.value}deg) saturated(${saturatedInput.value}%) negative(${negativeInput.value})`;
+    memeImage.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${greyScaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotation(${hueInput.value}deg) saturation(${saturatedInput.value}%) invert(${negativeInput.value})`;
 };
 
 
