@@ -251,9 +251,9 @@ urlImg.onchange = () => {
 
 // Input para cambiar el color de fondo de la imagen
 
-botonFondoImagen.oninput = () => {
-    memeImage.style.backgroundColor = botonFondoImagen.value;
-    imageBackgroundColorValue.textContent = botonFondoImagen.value;
+imageBackgroundColorInput.oninput = () => {
+    memeImage.style.backgroundColor = imageBackgroundColorInput.value;
+    imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
 }
 
 // Falta la funcion para cambiar estilos del fondo
@@ -293,3 +293,18 @@ negativeInput.addEventListener('change', actualizarFiltros);
 imageForm.onsubmit = (event) => {
     event.preventDefault()
 }
+
+// Responsive
+
+const closeImageAsideButton = document.querySelector("#close-image-aside-button");
+const closeTextAsideButton = document.querySelector("#close-text-aside-button");
+
+closeImageAsideButton.onclick = () => {
+    imageEditorAside.style.display = "none";
+}
+
+closeTextAsideButton.onclick = () => {
+    textEditorAside.style.display = "none";
+}
+
+

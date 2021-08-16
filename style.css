@@ -321,7 +321,7 @@ input[type="range"] {
 
 /* Estios del icono para cerrar el aside oculto */
 
-.aside-close-button {
+.close-aside {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -334,15 +334,25 @@ input[type="range"] {
   color: #fff;
 }
 
-/* Estilos del icono para cerrar el aside en tablets y celulares */
+/* Responsive */
+
+/* Se muestra el boton de cerrar aside */
 
 @media screen and (max-width: 1200px) {
-  .aside-close-button {
+  .close-aside {
     display: block;
   }
 
   .fas.fa-times {
     color: #fff;
+  }
+}
+
+/* Se oculta el aside */
+
+@media screen and (max-width: 1000px) {
+  .aside {
+    display: none;
   }
 }
 
