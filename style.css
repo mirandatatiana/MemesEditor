@@ -319,6 +319,33 @@ input[type="range"] {
   background-color: #c3c2c2;
 }
 
+/* Estios del icono para cerrar el aside oculto */
+
+.aside-close-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none;
+  left: 220px;
+  position: relative;
+}
+
+.fas.fa-times {
+  color: #fff;
+}
+
+/* Estilos del icono para cerrar el aside en tablets y celulares */
+
+@media screen and (max-width: 1200px) {
+  .aside-close-button {
+    display: block;
+  }
+
+  .fas.fa-times {
+    color: #fff;
+  }
+}
+
 /* Clase para ocultar elementos con Javascript */
 
 .hide {
