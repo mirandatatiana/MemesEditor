@@ -43,12 +43,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .meme-container {
-  width: 600px;
-  height: 600px;
+  max-width: 600px;
   text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .meme-text {
@@ -361,6 +364,12 @@ input[type="range"] {
 @media screen and (max-width: 700px) {
   .aside {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .main-title {
+    font-size: 24px;
   }
 }
 
