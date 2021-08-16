@@ -49,7 +49,11 @@
     <!-- Termina la caja del meme -->
     <!-- Empieza el aside de imagen -->
     <aside class="image-editor aside">
-      <button class="close-aside" id="close-image-aside-button" aria-label="close panel">
+      <button
+        class="close-aside"
+        id="close-image-aside-button"
+        aria-label="close panel"
+      >
         <i class="fas fa-times"></i>
       </button>
       <h2 class="editor-title">IMAGEN</h2>
@@ -88,9 +92,9 @@
                 class="range-image form-control"
                 type="range"
                 min="0"
-                max="100"
+                max="1"
                 step="0.1"
-                value="1"
+                value=""
                 id="brightness"
               />
             </label>
@@ -111,9 +115,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="0"
-                max="1000"
-                value="100"
+                min="100%"
+                max="1000%"
+                step="1%"
+                value="100%"
                 id="contrast"
               />
             </label>
@@ -122,8 +127,9 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="0"
-                max="100"
+                min="0px"
+                max="10px"
+                step="0.1px"
                 value="0"
                 id="blur"
               />
@@ -133,9 +139,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="0"
-                max="100"
-                value="0"
+                min="0%"
+                max="100%"
+                value="0%"
+                step="1%"
                 id="greyscale"
               />
             </label>
@@ -144,9 +151,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="0"
-                max="100"
-                value="0"
+                min="0%"
+                max="100%"
+                step="1%"
+                value="1%"
                 id="sepia"
               />
             </label>
@@ -155,9 +163,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="0"
-                max="100"
-                value="0"
+                min="0deg"
+                max="359deg"
+                step="1deg"
+                value="0deg"
                 id="hue"
               />
             </label>
@@ -166,9 +175,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="100"
-                max="1000"
-                value="100"
+                min="100%"
+                max="1000%"
+                value="10%"
+                slot="10%"
                 id="saturated"
               />
             </label>
@@ -177,9 +187,10 @@
               <input
                 class="range-image form-control"
                 type="range"
-                min="100"
-                max="1000"
-                value="100"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
                 id="negative"
               />
             </label>
@@ -197,7 +208,11 @@
     <!-- Termina el aside de imagen -->
     <!-- Empieza el aside de texto -->
     <aside class="text-editor aside">
-      <button class="close-aside" id="close-text-aside-button" aria-label="close panel">
+      <button
+        class="close-aside"
+        id="close-text-aside-button"
+        aria-label="close panel"
+      >
         <i class="fas fa-times"></i>
       </button>
       <h2 class="editor-title">TEXTO</h2>
