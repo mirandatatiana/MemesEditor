@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="editorDeMemes.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +41,7 @@
     <main class="main-content">
       <div class="meme-container">
         <p class="meme-top-text meme-text">TOP TEXT</p>
-        <div class="meme-image"></div>
+        <div class="meme-image memeImg"></div>
         <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
       </div>
       <button class="download">Descargar meme</button>
@@ -53,52 +53,132 @@
       <form action="" method="POST" class="image-form">
         <div class="url-editor editor">
           <h3 class="editor-subtitle">URL</h3>
-          <input type="url" class="url-image" name="url" id="url"/>
+          <input type="url" class="url-image urlImg" name="url" id="url" />
         </div>
         <div class="background-editor editor">
           <h3 class="editor-subtitle">FONDO</h3>
           <div class="form-control color-box">
-            <input type="color" name="color" id="color" value="#ffffff" />
+            <input
+              type="color"
+              name="color"
+              id="color"
+              value="#ffffff"
+              class="bkImg"
+            />
             <span id="color-value">#FFFFFF</span>
           </div>
           <select id="background" class="form-control color-box">
             <option value="none" id="none">Ninguno</option>
             <option value="lighten" id="lighten">Aclarar</option>
             <option value="darken" id="darken">Oscurecer</option>
-            <option value="contrast" id="contrast">Diferencia</option>
-            <option value="brightness" id="brightness">Luminosidad</option>
+            <option value="contrast" id="diferencia">Diferencia</option>
+            <option value="brightness" id="luminosidad">Luminosidad</option>
             <option value="multiply" id="multiply">Multiplicar</option>
           </select>
         </div>
         <div class="filter-editor editor">
           <h3 class="editor-subtitle">FILTROS</h3>
           <div class="filter-image">
-            <label for="bright">BRILLO
-              <input class="range-image form-control" type="range" min="0" max="100" step="0.1" value="1" id="brightness" />
+            <label for="bright"
+              >BRILLO
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="100"
+                step="0.1"
+                value="1"
+                id="brightness"
+              />
             </label>
-            <label for="opacity">OPACIDAD
-              <input class="range-image form-control" type="range" min="0" max="10" step="0.1" value="1" id="opacity" />
+            <label for="opacity"
+              >OPACIDAD
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="10"
+                step="0.1"
+                value="1"
+                id="opacity"
+              />
             </label>
-            <label for="contrast">CONTRASTE
-              <input class="range-image form-control" type="range" min="0" max="1000" value="100" id="contrast" />
+            <label for="contrast"
+              >CONTRASTE
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="1000"
+                value="100"
+                id="contrast"
+              />
             </label>
-            <label for="blur">DESENFOQUE
-              <input class="range-image form-control" type="range"  min="0" max="100" value="0" id="blur" />
+            <label for="blur"
+              >DESENFOQUE
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                id="blur"
+              />
             </label>
-            <label for="greyscale">ESCALA DE GRISES
-              <input class="range-image form-control" type="range"  min="0" max="100" value="0" id="greyscale" />
+            <label for="greyscale"
+              >ESCALA DE GRISES
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                id="greyscale"
+              />
             </label>
-            <label for="sepia">SEPIA
-              <input class="range-image form-control" type="range" min="0" max="100" value="0" id="sepia" />
+            <label for="sepia"
+              >SEPIA
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                id="sepia"
+              />
             </label>
-            <label for="hue">HUE
-              <input class="range-image form-control" type="range"  min="0" max="100" value="0" id="hue" />
+            <label for="hue"
+              >HUE
+              <input
+                class="range-image form-control"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                id="hue"
+              />
             </label>
-            <label for="saturated">SATURADO
-              <input class="range-image form-control" type="range" min="100" max="1000" value="100" id="saturated" />
+            <label for="saturated"
+              >SATURADO
+              <input
+                class="range-image form-control"
+                type="range"
+                min="100"
+                max="1000"
+                value="100"
+                id="saturated"
+              />
             </label>
-            <label for="negative">NEGATIVO
-              <input class="range-image form-control" type="range" min="100" max="1000" value="100" id="negative" />
+            <label for="negative"
+              >NEGATIVO
+              <input
+                class="range-image form-control"
+                type="range"
+                min="100"
+                max="1000"
+                value="100"
+                id="negative"
+              />
             </label>
           </div>
         </div>
