@@ -58,10 +58,18 @@
       </button>
       <h2 class="editor-title">IMAGEN</h2>
       <form action="" method="POST" class="image-form">
+        <!--Url-->
         <div class="url-editor editor">
           <h3 class="editor-subtitle">URL</h3>
-          <input type="url" class="url-image urlImg" name="url" id="url" />
+          <input
+            type="url"
+            class="url-image urlImg"
+            name="url"
+            id="url"
+            aria-label="url"
+          />
         </div>
+        <!--Color de Fondo-->
         <div class="background-editor editor">
           <h3 class="editor-subtitle">FONDO</h3>
           <div class="form-control color-box">
@@ -71,18 +79,39 @@
               id="color"
               value="#ffffff"
               class="bkImg"
+              aria-label="color de fondo"
             />
             <span id="color-value">#FFFFFF</span>
           </div>
-          <select id="background" class="form-control color-box">
-            <option value="none" id="none">Ninguno</option>
-            <option value="lighten" id="lighten">Aclarar</option>
-            <option value="darken" id="darken">Oscurecer</option>
-            <option value="difference" id="diferencia">Diferencia</option>
-            <option value="luminosity" id="luminosidad">Luminosidad</option>
-            <option value="multiply" id="multiply">Multiplicar</option>
+          <!--Fonde de imagen-->
+          <select
+            id="background-meme"
+            class="form-control color-box"
+            aria-label="seleecion de fondo"
+          >
+            <option value="none" id="none" aria-label="Ninguno">Ninguno</option>
+            <option value="lighten" id="lighten" aria-label="Aclarar">
+              Aclarar
+            </option>
+            <option value="darken" id="darken" aria-label="Oscurecer">
+              Oscurecer
+            </option>
+            <option value="difference" id="diferencia" aria-label="Diferencia">
+              Diferencia
+            </option>
+            <option
+              value="luminosity"
+              id="luminosidad"
+              aria-label="Luminosidad"
+            >
+              Luminosidad
+            </option>
+            <option value="multiply" id="multiply" aria-label="Multiplicar">
+              Multiplicar
+            </option>
           </select>
         </div>
+        <!--Filtros de imagen-->
         <div class="filter-editor editor">
           <h3 class="editor-subtitle">FILTROS</h3>
           <div class="filter-image">
@@ -196,6 +225,7 @@
             </label>
           </div>
         </div>
+        <!--Reset filtro de imagen-->
         <input
           type="submit"
           class="reset-filters"
@@ -211,7 +241,7 @@
       <button
         class="close-aside"
         id="close-text-aside-button"
-        aria-label="close panel"
+        aria-label="panel de texto"
       >
         <i class="fas fa-times"></i>
       </button>
@@ -223,8 +253,14 @@
           id="top-text-editor"
           placeholder="TOP TEXT"
           class="form-control full-width-form-control"
+          aria-label="Top texto"
         ></textarea>
-        <input type="checkbox" name="no-top-text" id="no-top-text" />
+        <input
+          type="checkbox"
+          name="no-top-text"
+          id="no-top-text"
+          aria-label="checkbox no top texto"
+        />
         <label for="no-top-text">Sin texto superior</label>
       </div>
       <div class="editor">
@@ -234,8 +270,14 @@
           id="bottom-text-editor"
           placeholder="BOTTOM TEXT"
           class="form-control full-width-form-control"
+          aria-label="bottom texto"
         ></textarea>
-        <input type="checkbox" name="no-bottom-text" id="no-bottom-text" />
+        <input
+          type="checkbox"
+          name="no-bottom-text"
+          id="no-bottom-text"
+          aria-label="checkbox no texto"
+        />
         <label for="no-bottom-text">Sin texto inferior</label>
       </div>
       <div class="editor">
@@ -247,6 +289,7 @@
             full-width-form-control
             font-selection-form-control
           "
+          aria-label="seleccionar texto"
         >
           <option value="arial" id="arial">Arial</option>
           <option value="arial-black" id="arial-black">Arial Black</option>
@@ -261,6 +304,7 @@
             Times New Roman
           </option>
         </select>
+        <!--Tamaño de fuente-->
         <input
           type="number"
           name="font-size"
@@ -268,17 +312,32 @@
           placeholder="40"
           min="12"
           class="form-control font-size-form-control"
+          aria-label="tamaño de fuente"
         />
-        <button id="left-alignment" class="form-control">
+        <!--Alineacion de texto-->
+        <button
+          id="left-alignment"
+          class="form-control"
+          aria-label="Alineacion izquierda"
+        >
           <i class="fas fa-align-left"></i>
         </button>
-        <button id="center-alignment" class="form-control">
+        <button
+          id="center-alignment"
+          class="form-control"
+          aria-label="Alineacion central"
+        >
           <i class="fas fa-align-center"></i>
         </button>
-        <button id="right-alignment" class="form-control">
+        <button
+          id="right-alignment"
+          class="form-control"
+          aria-label="Alineacion derecha"
+        >
           <i class="fas fa-align-right"></i>
         </button>
       </div>
+      <!--Selecionar color-->
       <div class="editor">
         <div class="color-editor">
           <div class="color-editor-column">
@@ -289,8 +348,10 @@
               id="text-color"
               value="#000000"
               class="form-control"
+              aria-label="color"
             />
           </div>
+          <!--Selecionar fondo-->
           <div class="color-editor-column">
             <h3 class="editor-subtitle">FONDO</h3>
             <input
@@ -299,6 +360,7 @@
               id="background-color"
               value="#ffffff"
               class="form-control"
+              aria-label="fondo"
             />
           </div>
         </div>
@@ -306,15 +368,28 @@
           type="checkbox"
           name="transparent-background"
           id="transparent-background"
+          aria-label="checkbox fondo trasparente"
         />
         <label for="transparent-background">Fondo transparente</label>
       </div>
+      <!--Contorno-->
       <div class="editor">
         <h3 class="editor-subtitle">CONTORNO</h3>
-        <button id="no-outline" class="form-control">Ninguno</button>
-        <button id="light-outline" class="form-control">Claro</button>
-        <button id="dark-outline" class="form-control">Oscuro</button>
+        <button
+          id="no-outline"
+          class="form-control"
+          aria-label="Ningun contorno"
+        >
+          Ninguno
+        </button>
+        <button id="light-outline" class="form-control" aria-label="Claro">
+          Claro
+        </button>
+        <button id="dark-outline" class="form-control" aria-label="Oscuro">
+          Oscuro
+        </button>
       </div>
+      <!--Espaciado-->
       <div class="editor">
         <h3 class="editor-subtitle">ESPACIADO</h3>
         <input
@@ -325,8 +400,10 @@
           max="50"
           placeholder="35"
           class="form-control full-width-form-control"
+          aria-label="Espaciado"
         />
       </div>
+      <!--Interlineado-->
       <div class="editor">
         <h3 class="editor-subtitle">INTERLINEADO</h3>
         <select

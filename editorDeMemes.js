@@ -256,17 +256,17 @@ imageBackgroundColorInput.oninput = () => {
     imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
 }
 
-// Falta la funcion para cambiar estilos del fondo
-fondoDeImage.onclick = () => {
-    if (memeImage.value === "lighten")
+//  Estilos del fondo
+fondoDeImage.oninput = () => {
+    if (fondoDeImage.value === "lighten")
         memeImage.style.backgroundBlendMode = "lighten";
-    else if (memeImage.value === "darken") {
+    else if (fondoDeImage.value === "darken") {
         memeImage.style.backgroundBlendMode = "darken";
-    } else if (memeImage.value === "difference") {
+    } else if (fondoDeImage.value === "difference") {
         memeImage.style.backgroundBlendMode = "difference";
-    } else if (memeImage.value === "luminosity") {
+    } else if (fondoDeImage.value === "luminosity") {
         memeImage.style.backgroundBlendMode = "luminosity";
-    } else if (memeImage.value === "multiply") {
+    } else if (fondoDeImage.value === "multiply") {
         memeImage.style.backgroundBlendMode = "multiply";
     }
 
@@ -295,19 +295,18 @@ hueInput.addEventListener('change', actualizarFiltros);
 saturatedInput.addEventListener('change', actualizarFiltros);
 negativeInput.addEventListener('change', actualizarFiltros);
 
-// Reestablecer filtros (esto tira un error, hay que revisarlo)
-
-// resetFiltersButton.onclick = () => {
-//     brightnessInput.value = 1;
-//     opacityInput.value = 1;
-//     contrastInput.value = 100;
-//     blurInput.value = 0;
-//     greyScaleInput.value = 0;
-//     sepiaInput.value = 0;
-//     hueInput.value = 0;
-//     saturatedInput.value = 100;
-//     negativeInput.value = 0;
-// }
+// Reestablecer filtros 
+resetFiltersButton.onclick = () => {
+    brightnessInput.value = 1;
+    opacityInput.value = 1;
+    contrastInput.value = 100;
+    blurInput.value = 0;
+    greyScaleInput.value = 0;
+    sepiaInput.value = 0;
+    hueInput.value = 0;
+    saturatedInput.value = 100;
+    negativeInput.value = 0;
+}
 
 // Función para evitar el envío del formulario
 
