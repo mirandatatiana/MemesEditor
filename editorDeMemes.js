@@ -4,18 +4,35 @@ const containerMode = document.querySelector(".container-mode")
 const buttonDarkMode = document.querySelector(".darkbutton")
 
 const changeMode = () => {
-
     containerMode.classList.toggle("container-mode")
     containerMode.classList.toggle("container-light")
-
 }
 
 buttonDarkMode.onclick = changeMode
 
-// Editor de texto
+// Botones para que se vean los aside
 
 const textEditorButton = document.getElementById("text-button");
 const textEditorAside = document.querySelector(".text-editor");
+const imageEditorButton = document.getElementById("image-button");
+const imageEditorAside = document.querySelector(".image-editor");
+
+// Boton para que se vea el aside de imagen
+
+imageEditorButton.onclick = () => {
+    textEditorAside.style.display = "none";
+    imageEditorAside.style.display = "block";
+}
+
+// Boton para que se vea el aside de texto
+
+textEditorButton.onclick = () => {
+    imageEditorAside.style.display = "none";
+    textEditorAside.style.display = "block";
+}
+
+// Editor de texto
+
 const memeTopText = document.querySelector(".meme-top-text");
 const memeTopTextEditor = document.querySelector("#top-text-editor");
 const topTextCheckbox = document.querySelector("#no-top-text");
@@ -49,12 +66,6 @@ const lineHeightOneTwo = document.querySelector("#one-two");
 const lineHeightOneFive = document.querySelector("#one-five");
 const lineHeightTwo = document.querySelector("#two");
 const lineHeightTwoFive = document.querySelector("#two-five");
-
-// Boton para que se vea el aside de texto
-
-textEditorButton.onclick = () => {
-    textEditorAside.style.display = "block";
-}
 
 // Input que modifica el texto superior del meme
 
@@ -215,7 +226,6 @@ lineHeightSelection.onchange = () => {
 
 // Editor de imagen
 
-const imageEditorButton = document.getElementById("image-button");
 const imageUrlInput = document.querySelector(".url-image");
 const imageBackgroundColorInput = document.querySelector("#color");
 const imageBackgroundColorValue = document.querySelector("#color-value");
@@ -232,13 +242,6 @@ const resetFiltersButton = document.getElementById("#reset-filters");
 const memeImage = document.querySelector(".memeImg");
 const urlImg = document.querySelector('.urlImg')
 const imageForm = document.querySelector(".image-form");
-
-// Boton para que se vea el aside de imagen
-
-const botonFondoImagen = document.querySelector('.bkImg');
-imageEditorButton.onclick = () => {
-    textEditorAside.style.display = "none";
-}
 
 // Input para agregar la url de la imagen
 
