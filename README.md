@@ -14,7 +14,7 @@ Tecnologia utilizada:
 - CSS
 - JAVASCRIPT
 
-Si quieren ver nuestro editor de memes, les dejamos el link: 
+Si quieren ver nuestro editor de memes, les dejamos el link: https://mirandatatiana.github.io/editorDeMemes/
 
 
 Muchas gracias por la visita. 
