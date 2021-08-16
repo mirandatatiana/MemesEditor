@@ -242,7 +242,7 @@ const resetFiltersButton = document.getElementById("#reset-filters");
 const memeImage = document.querySelector(".memeImg");
 const urlImg = document.querySelector('.urlImg')
 const imageForm = document.querySelector(".image-form");
-
+const fondoDeImage = document.querySelector('#background-meme')
 // Input para agregar la url de la imagen
 
 urlImg.onchange = () => {
@@ -257,11 +257,32 @@ imageBackgroundColorInput.oninput = () => {
 }
 
 // Falta la funcion para cambiar estilos del fondo
+fondoDeImage.onclick = () => {
+    if (memeImage.value === "lighten")
+        memeImage.style.backgroundBlendMode = "lighten";
+    else if (memeImage.value === "darken") {
+        memeImage.style.backgroundBlendMode = "darken";
+    } else if (memeImage.value === "difference") {
+        memeImage.style.backgroundBlendMode = "difference";
+    } else if (memeImage.value === "luminosity") {
+        memeImage.style.backgroundBlendMode = "luminosity";
+    } else if (memeImage.value === "multiply") {
+        memeImage.style.backgroundBlendMode = "multiply";
+    }
 
+}
 // Aplicar filtros
 
 const actualizarFiltros = () => {
-    memeImage.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${greyScaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotation(${hueInput.value}deg) saturation(${saturatedInput.value}%) invert(${negativeInput.value})`;
+    memeImage.style.filter = `brightness(${brightnessInput.value})
+     opacity(${opacityInput.value})
+      contrast(${contrastInput.value}%)
+       blur(${blurInput.value}px)
+        grayscale(${greyScaleInput.value}%)
+         sepia(${sepiaInput.value}%)
+          hue-rotate(${hueInput.value}deg)
+           saturate(${saturatedInput.value}%)
+            invert(${negativeInput.value})`;
 }
 
 brightnessInput.addEventListener('change', actualizarFiltros);
