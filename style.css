@@ -326,8 +326,8 @@ input[type="range"] {
   background-color: transparent;
   border: none;
   display: none;
-  left: 220px;
-  position: relative;
+  position: absolute;
+  right: 20px;
 }
 
 .fas.fa-times {
@@ -353,6 +353,14 @@ input[type="range"] {
 @media screen and (max-width: 1000px) {
   .aside {
     display: none;
+  }
+}
+
+/* Los aside pasan a ocupar todo el ancho de pantalla */
+
+@media screen and (max-width: 700px) {
+  .aside {
+    width: 100%;
   }
 }
 
