@@ -12,6 +12,8 @@ const changeMode = () => {
 
 buttonDarkMode.onclick = changeMode
 
+// Editor de texto
+
 const textEditorButton = document.getElementById("text-button");
 const textEditorAside = document.querySelector(".text-editor");
 const memeTopText = document.querySelector(".meme-top-text");
@@ -48,6 +50,109 @@ const lineHeightOneFive = document.querySelector("#one-five");
 const lineHeightTwo = document.querySelector("#two");
 const lineHeightTwoFive = document.querySelector("#two-five");
 
+// Boton para que se vea el aside de texto
+
+textEditorButton.onclick = () => {
+    textEditorAside.style.display = "block";
+}
+
+// Input que modifica el texto superior del meme
+
+memeTopTextEditor.oninput = () => {
+    memeTopText.textContent = memeTopTextEditor.value;
+}
+
+// Checkbox para eliminar el texto superior del meme
+
+topTextCheckbox.onclick = () => {
+    memeTopText.classList.toggle("hide");
+}
+
+// Input que modifica el texto inferior del meme
+
+memeBottomTextEditor.oninput = () => {
+    memeBottomText.textContent = memeBottomTextEditor.value;
+}
+
+// Checkbox para eliminar el texto inferior del meme
+
+bottomTextCheckbox.onclick = () => {
+    memeBottomText.classList.toggle("hide");
+}
+
+// Selector de tipografía del meme
+
+fontSelection.onchange = () => {
+    if (fontSelection.value === "arial") {
+        memeTopText.style.fontFamily = "Arial";
+        memeBottomText.style.fontFamily = "Arial";
+    }
+    else if (fontSelection.value === "arial-black") {
+        memeTopText.style.fontFamily = "Arial Black";
+        memeBottomText.style.fontFamily = "Arial Black";
+    }
+    else if (fontSelection.value === "american-typewriter") {
+        memeTopText.style.fontFamily = "American Typewriter";
+        memeBottomText.style.fontFamily = "American Typewriter";
+    }
+    else if (fontSelection.value === "comic-sans") {
+        memeTopText.style.fontFamily = "Comic Sans MS";
+        memeBottomText.style.fontFamily = "Comic Sans MS";
+    }
+    else if (fontSelection.value === "helvetica") {
+        memeTopText.style.fontFamily = "Helvetica";
+        memeBottomText.style.fontFamily = "Helvetica";
+    }
+    else if (fontSelection.value === "impact") {
+        memeTopText.style.fontFamily = "Impact";
+        memeBottomText.style.fontFamily = "Impact";
+    }
+    else if (fontSelection.value === "verdana") {
+        memeTopText.style.fontFamily = "Verdana";
+        memeBottomText.style.fontFamily = "Verdana";
+    }
+    else if (fontSelection.value === "times-new-roman") {
+        memeTopText.style.fontFamily = "Times New Roman";
+        memeBottomText.style.fontFamily = "Times New Roman";
+    }
+}
+
+// Input que modifica el tamaño de la tipografía del meme
+
+fontSizeInput.oninput = () => {
+    memeTopText.style.fontSize = `${fontSizeInput.value}px`;
+    memeBottomText.style.fontSize = `${fontSizeInput.value}px`;
+}
+
+// Botones para cambiar el alineamiento del texto del meme
+
+leftAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "left";
+    memeBottomText.style.textAlign = "left";
+}
+
+centerAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "center";
+    memeBottomText.style.textAlign = "center";
+}
+
+rightAlignmentButton.onclick = () => {
+    memeTopText.style.textAlign = "right";
+    memeBottomText.style.textAlign = "right";
+}
+
+// Input para cambiar colores de la tipografía y del fondo
+
+textColorInput.oninput = () => {
+    memeTopText.style.color = textColorInput.value;
+    memeBottomText.style.color = textColorInput.value;
+}
+
+backgroundColorInput.oninput = () => {
+    memeTopText.style.backgroundColor = backgroundColorInput.value;
+    memeBottomText.style.backgroundColor = backgroundColorInput.value;
+}
+
 // Checkbox para que el color de fondo sea transparente
 
 transparentBackgroundCheckbox.onclick = () => {
@@ -73,7 +178,6 @@ darkOutlineButton.onclick = () => {
 }
 
 // Input para cambiar el padding del texto
-// Falta lograr que el contenedor del meme no se agrande
 
 paddingInput.oninput = () => {
     memeTopText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
@@ -109,12 +213,10 @@ lineHeightSelection.onchange = () => {
     }
 }
 
-
 // Editor de imagen
 
 const imageEditorButton = document.getElementById("image-button");
 const imageUrlInput = document.querySelector(".url-image");
-
 const imageBackgroundColorInput = document.querySelector("#color");
 const imageBackgroundColorValue = document.querySelector("#color-value");
 const brightnessInput = document.querySelector("#brightness");
@@ -129,44 +231,35 @@ const negativeInput = document.querySelector("#negative");
 const resetFiltersButton = document.getElementById("#reset-filters");
 const memeImage = document.querySelector(".memeImg");
 const urlImg = document.querySelector('.urlImg')
+const imageForm = document.querySelector(".image-form");
+
 // Boton para que se vea el aside de imagen
+
 const botonFondoImagen = document.querySelector('.bkImg');
 imageEditorButton.onclick = () => {
     textEditorAside.style.display = "none";
 }
 
-
-
-
+// Input para agregar la url de la imagen
 
 urlImg.onchange = () => {
     memeImage.style.backgroundImage = `url(${urlImg.value})`
-
 }
-
-
-
-botonFondoImagen.oninput = () => {
-    memeImage.style.backgroundColor = botonFondoImagen.value;
-
-}
-
-// Input para agregar la url de la imagen
-
 
 // Input para cambiar el color de fondo de la imagen
 
-
+botonFondoImagen.oninput = () => {
+    memeImage.style.backgroundColor = botonFondoImagen.value;
+    imageBackgroundColorValue.textContent = botonFondoImagen.value;
+}
 
 // Falta la funcion para cambiar estilos del fondo
-
 
 // Aplicar filtros
 
 const actualizarFiltros = () => {
     memeImage.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${greyScaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotation(${hueInput.value}deg) saturation(${saturatedInput.value}%) invert(${negativeInput.value})`;
-};
-
+}
 
 brightnessInput.addEventListener('change', actualizarFiltros);
 opacityInput.addEventListener('change', actualizarFiltros);
@@ -178,20 +271,22 @@ hueInput.addEventListener('change', actualizarFiltros);
 saturatedInput.addEventListener('change', actualizarFiltros);
 negativeInput.addEventListener('change', actualizarFiltros);
 
-// Reestablecer filtros 
+// Reestablecer filtros (esto tira un error, hay que revisarlo)
 
 // resetFiltersButton.onclick = () => {
-//     // brightnessInput.value = 1;
-//     // opacityInput.value = 1;
-//     // contrastInput.value = 100;
-//     // blurInput.value = 0;
-//     // greyScaleInput.value = 0;
-//     // sepiaInput.value = 0;
-//     // hueInput.value = 0;
-//     // saturatedInput.value = 100;
-//     // negativeInput.value = 0;
+//     brightnessInput.value = 1;
+//     opacityInput.value = 1;
+//     contrastInput.value = 100;
+//     blurInput.value = 0;
+//     greyScaleInput.value = 0;
+//     sepiaInput.value = 0;
+//     hueInput.value = 0;
+//     saturatedInput.value = 100;
+//     negativeInput.value = 0;
 // }
 
-// Probando clave ssh
+// Función para evitar el envío del formulario
 
-
+imageForm.onsubmit = (event) => {
+    event.preventDefault()
+}

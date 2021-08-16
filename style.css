@@ -62,6 +62,8 @@
 .meme-image {
   background-color: #000;
   height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .download {
