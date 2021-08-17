@@ -31,6 +31,19 @@ textEditorButton.onclick = () => {
     textEditorAside.style.display = "block";
 }
 
+// Boton para cerrar los aside
+
+const closeImageAsideButton = document.querySelector("#close-image-aside-button");
+const closeTextAsideButton = document.querySelector("#close-text-aside-button");
+
+closeImageAsideButton.onclick = () => {
+    imageEditorAside.style.display = "none";
+}
+
+closeTextAsideButton.onclick = () => {
+    textEditorAside.style.display = "none";
+}
+
 // Editor de texto
 
 const memeTopText = document.querySelector(".meme-top-text");
@@ -296,6 +309,7 @@ saturatedInput.addEventListener('change', actualizarFiltros);
 negativeInput.addEventListener('change', actualizarFiltros);
 
 // Reestablecer filtros 
+
 resetFiltersButton.onclick = () => {
     brightnessInput.value = 1;
     opacityInput.value = 1;
@@ -306,25 +320,13 @@ resetFiltersButton.onclick = () => {
     hueInput.value = 0;
     saturatedInput.value = 100;
     negativeInput.value = 0;
+    memeImage.style.filters = "none";
 }
 
 // Función para evitar el envío del formulario
 
 imageForm.onsubmit = (event) => {
     event.preventDefault()
-}
-
-// Responsive
-
-const closeImageAsideButton = document.querySelector("#close-image-aside-button");
-const closeTextAsideButton = document.querySelector("#close-text-aside-button");
-
-closeImageAsideButton.onclick = () => {
-    imageEditorAside.style.display = "none";
-}
-
-closeTextAsideButton.onclick = () => {
-    textEditorAside.style.display = "none";
 }
 
 
