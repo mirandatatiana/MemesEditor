@@ -251,8 +251,8 @@ const sepiaInput = document.querySelector("#sepia");
 const hueInput = document.querySelector("#hue");
 const saturatedInput = document.querySelector("#saturated");
 const negativeInput = document.querySelector("#negative");
-const resetFiltersButton = document.getElementById("#reset-filters");
-const memeImage = document.querySelector(".memeImg");
+const resetFiltersButton = document.querySelector("#reset-filters-button");
+const memeImage = document.querySelector(".meme-image");
 const urlImg = document.querySelector('.urlImg')
 const imageForm = document.querySelector(".image-form");
 const fondoDeImage = document.querySelector('#background-meme')
@@ -311,6 +311,7 @@ negativeInput.addEventListener('change', actualizarFiltros);
 // Reestablecer filtros 
 
 resetFiltersButton.onclick = () => {
+    memeImage.style.filter = "none";
     brightnessInput.value = 1;
     opacityInput.value = 1;
     contrastInput.value = 100;
@@ -320,7 +321,6 @@ resetFiltersButton.onclick = () => {
     hueInput.value = 0;
     saturatedInput.value = 100;
     negativeInput.value = 0;
-    memeImage.style.filters = "none";
 }
 
 // Función para evitar el envío del formulario
