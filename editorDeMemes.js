@@ -3,6 +3,13 @@
 const containerMode = document.querySelector(".container-mode")
 const buttonDarkMode = document.querySelector(".darkbutton")
 
+// Como esta funcion no se va a reutilizar, mejor asociarla al boton:
+
+// buttonDarkMode.onclick = () => {
+//     containerMode.classList.toggle("container-mode")
+//     containerMode.classList.toggle("container-light")
+// }
+
 const changeMode = () => {
     containerMode.classList.toggle("container-mode")
     containerMode.classList.toggle("container-light")
@@ -107,6 +114,26 @@ bottomTextCheckbox.onclick = () => {
 // Selector de tipografía del meme
 
 fontSelection.onchange = () => {
+// Esta funcion no esta mal, todo lo contrario! Lo resolvieron super bien.
+    // Pero quiero comentarles que si le hubieran dado el "value" al select
+    // con el nombre final de la tipografia, habria sido mucho mas sencillo. 
+    // Por ejemplo, en el select escribimos:
+
+    // <option value="Arial, Helvetica, sans-serif">Arial</option>
+    // <option value="Montserrat">Montserrat</option>
+    // <option value="American Typewriter">American Typewriter</option>
+    // <option value="monospace">Monospace</option>
+    // <option value="Comic Sans MS" selected>Comic Sans MS</option>
+    // <option value="Comic Neue">Comic Neue</option>
+    // <option value="Impact">Impact</option>
+    // <option value="Verdana">Verdana</option>
+    // <option value="DotGothic16">Dot Gothic</option>   
+    
+    // y con ese cambio en html, ahora nuestra funcion puede ser asi de sencilla:
+//    fontSelection.onchange = () => {
+//     memeTopText.style.fontFamily = fontSelection.value
+//     memeBottomText.style.fontFamily = fontSelection.value
+// }
     if (fontSelection.value === "arial") {
         memeTopText.style.fontFamily = "Arial";
         memeBottomText.style.fontFamily = "Arial";
@@ -149,6 +176,25 @@ fontSizeInput.oninput = () => {
 }
 
 // Botones para cambiar el alineamiento del texto del meme
+
+// Esto es un detalle, pero 
+// podriamos hacer una funcion reutilizable aqui, y en muchisimos otros lugares de su codigo:
+// const alignText = (alignment) => {
+//     memeTopText.style.textAlign = alignment
+//     memeBottomText.style.textAlign = alignment
+// }
+// Y despues llamarla usando parametros en cada onclick:
+// leftAlignmentButton.onclick = () => {
+//     alignText("left")
+// }
+
+// centerAlignmentButton.onclick = () => {
+//     alignText("center")
+// }
+
+// rightAlignmentButton.onclick = () => {
+//     alignText("right")
+// }
 
 leftAlignmentButton.onclick = () => {
     memeTopText.style.textAlign = "left";
@@ -211,6 +257,14 @@ paddingInput.oninput = () => {
 // Selector de interlineado de texto
 
 lineHeightSelection.onchange = () => {
+    // No necesitan hacer todos estos if else porque ya tienen toda la info que necesitan.
+    // La funcion podria ser asi de sencilla:
+
+    // lineHeightSelection.onchange = () => {
+    //     memeTopText.style.lineHeight = lineHeightSelection.value
+    //     memeBottomText.style.lineHeight = lineHeightSelection.value
+    // }
+
     if (lineHeightSelection.value === "0.8") {
         memeTopText.style.lineHeight = "0.8";
         memeBottomText.style.lineHeight = "0.8";
@@ -271,6 +325,10 @@ imageBackgroundColorInput.oninput = () => {
 
 //  Estilos del fondo
 fondoDeImage.oninput = () => {
+//     Esta funcion podria ser mucho mas breve:
+// fondoDeImage.oninput = () => {    
+//     memeImage.style.backgroundBlendMode = fondoDeImage.value
+// }
     if (fondoDeImage.value === "lighten")
         memeImage.style.backgroundBlendMode = "lighten";
     else if (fondoDeImage.value === "darken") {
