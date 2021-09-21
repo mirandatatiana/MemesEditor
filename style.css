@@ -117,6 +117,8 @@
   border: none;
   border-radius: 4px;
   color: #fff;
+  /* Este padding aca ocasiona que en los inputs de tipo range me de la apariencia de que no puedo
+  elegir hasta el final.  */
   padding: 5px 10px;
 }
 
