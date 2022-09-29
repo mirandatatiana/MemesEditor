@@ -2,7 +2,7 @@ Hello There!
 <br>
 You are in Memes Editor Project 📺
 <br>
-This Project was realized by :
+Realized by :
 
 - Candela Olha 
 - Tatiana Miranda
