@@ -1,5 +1,7 @@
 Hello There!
-MEME GENERATOR
+<br>
+You are in Memes Editor Project 📺
+<br>
 This Project was realized by :
 
 - Candela Olha 
@@ -14,6 +16,6 @@ Tecnologies
 - JAVASCRIPT
 
 Here the LINK 
-https://mirandatatiana.github.io/editorDeMemes/
+https://mirandatatiana.github.io/editorDeMemes/ 🚀
 
-Go to the next Project https://github.com/mirandatatiana/Wallet
+Go to the next Project https://github.com/mirandatatiana/Wallet 💸
