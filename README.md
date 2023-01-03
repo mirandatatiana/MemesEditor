@@ -1,22 +1,21 @@
-Generador de Memes 
-
-Este proyecto fue realizado por: 
+Hello There!
+<br>
+You are in Memes Editor Project 📺
+<br>
+Realized by :
 
 - Candela Olha 
 - Tatiana Miranda
 - Carolina Raniti
 
-Es nuestro segundo Proyecto en ADA, esta vez en grupo. Se trata de un editor de memes en donde van a poder manipular el texto y la imagen del mismo. 
+This Project is about a Meme Editor in where you can manipulated the texts and image 
 
-Tecnologia utilizada: 
-
+Tecnologies
 - HTML5
 - CSS
 - JAVASCRIPT
 
-Si quieren ver nuestro editor de memes, les dejamos el link: https://mirandatatiana.github.io/editorDeMemes/
+Here the LINK 
+https://mirandatatiana.github.io/editorDeMemes/ 🚀
 
-
-Muchas gracias por la visita. 
-
-
+Go to the next Project https://github.com/mirandatatiana/Wallet 💸
