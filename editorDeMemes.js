@@ -1,50 +1,24 @@
-// Modo oscuro
+// Image Editor
 
-const containerMode = document.querySelector(".container-mode")
-const buttonDarkMode = document.querySelector(".darkbutton")
+const imageUrlInput = document.querySelector(".url-image");
+const imageBackgroundColorInput = document.querySelector("#color");
+const imageBackgroundColorValue = document.querySelector("#color-value");
+const brightnessInput = document.querySelector("#brightness");
+const opacityInput = document.querySelector("#opacity");
+const contrastInput = document.querySelector("#contrast");
+const blurInput = document.querySelector("#blur");
+const greyScaleInput = document.querySelector("#greyscale");
+const sepiaInput = document.querySelector("#sepia");
+const hueInput = document.querySelector("#hue");
+const saturatedInput = document.querySelector("#saturated");
+const negativeInput = document.querySelector("#negative");
+const resetFiltersButton = document.querySelector("#reset-filters-button");
+const memeImage = document.querySelector(".meme-image");
+const urlImg = document.querySelector('.urlImg')
+const imageForm = document.querySelector(".image-form");
+const fondoDeImage = document.querySelector('#background-meme')
 
-const changeMode = () => {
-    containerMode.classList.toggle("container-mode")
-    containerMode.classList.toggle("container-light")
-}
-
-buttonDarkMode.onclick = changeMode
-
-// Botones para que se vean los aside
-
-const textEditorButton = document.getElementById("text-button");
-const textEditorAside = document.querySelector(".text-editor");
-const imageEditorButton = document.getElementById("image-button");
-const imageEditorAside = document.querySelector(".image-editor");
-
-// Boton para que se vea el aside de imagen
-
-imageEditorButton.onclick = () => {
-    textEditorAside.style.display = "none";
-    imageEditorAside.style.display = "block";
-}
-
-// Boton para que se vea el aside de texto
-
-textEditorButton.onclick = () => {
-    imageEditorAside.style.display = "none";
-    textEditorAside.style.display = "block";
-}
-
-// Boton para cerrar los aside
-
-const closeImageAsideButton = document.querySelector("#close-image-aside-button");
-const closeTextAsideButton = document.querySelector("#close-text-aside-button");
-
-closeImageAsideButton.onclick = () => {
-    imageEditorAside.style.display = "none";
-}
-
-closeTextAsideButton.onclick = () => {
-    textEditorAside.style.display = "none";
-}
-
-// Editor de texto
+// Text Editor
 
 const memeTopText = document.querySelector(".meme-top-text");
 const memeTopTextEditor = document.querySelector("#top-text-editor");
@@ -80,31 +54,79 @@ const lineHeightOneFive = document.querySelector("#one-five");
 const lineHeightTwo = document.querySelector("#two");
 const lineHeightTwoFive = document.querySelector("#two-five");
 
-// Input que modifica el texto superior del meme
+
+// Dark Mood
+
+const containerMode = document.querySelector(".container-mode")
+const buttonDarkMode = document.querySelector(".darkbutton")
+
+const changeMode = () => {
+    containerMode.classList.toggle("container-mode")
+    containerMode.classList.toggle("container-light")
+}
+
+buttonDarkMode.onclick = changeMode
+
+// Aside Buttons Text
+
+const textEditorButton = document.getElementById("text-button");
+const textEditorAside = document.querySelector(".text-editor");
+const imageEditorButton = document.getElementById("image-button");
+const imageEditorAside = document.querySelector(".image-editor");
+
+// Aside Buttons Image
+
+imageEditorButton.onclick = () => {
+    textEditorAside.style.display = "none";
+    imageEditorAside.style.display = "block";
+}
+
+// Button Aside Text
+
+textEditorButton.onclick = () => {
+    imageEditorAside.style.display = "none";
+    textEditorAside.style.display = "block";
+}
+
+// Closed Aside
+
+const closeImageAsideButton = document.querySelector("#close-image-aside-button");
+const closeTextAsideButton = document.querySelector("#close-text-aside-button");
+
+closeImageAsideButton.onclick = () => {
+    imageEditorAside.style.display = "none";
+}
+
+closeTextAsideButton.onclick = () => {
+    textEditorAside.style.display = "none";
+}
+
+
+// Top Text 
 
 memeTopTextEditor.oninput = () => {
     memeTopText.textContent = memeTopTextEditor.value;
 }
 
-// Checkbox para eliminar el texto superior del meme
+// Eliminate the top text
 
 topTextCheckbox.onclick = () => {
     memeTopText.classList.toggle("hide");
 }
 
-// Input que modifica el texto inferior del meme
+// Botttom Text 
 
 memeBottomTextEditor.oninput = () => {
     memeBottomText.textContent = memeBottomTextEditor.value;
 }
 
-// Checkbox para eliminar el texto inferior del meme
+// Eliminate the bottom text
 
 bottomTextCheckbox.onclick = () => {
     memeBottomText.classList.toggle("hide");
 }
 
-// Selector de tipografía del meme
+// Typography Selector
 
 fontSelection.onchange = () => {
     if (fontSelection.value === "arial") {
@@ -141,14 +163,14 @@ fontSelection.onchange = () => {
     }
 }
 
-// Input que modifica el tamaño de la tipografía del meme
+// Modify size of typography
 
 fontSizeInput.oninput = () => {
     memeTopText.style.fontSize = `${fontSizeInput.value}px`;
     memeBottomText.style.fontSize = `${fontSizeInput.value}px`;
 }
 
-// Botones para cambiar el alineamiento del texto del meme
+// Bottons for Alignment text 
 
 leftAlignmentButton.onclick = () => {
     memeTopText.style.textAlign = "left";
@@ -165,7 +187,7 @@ rightAlignmentButton.onclick = () => {
     memeBottomText.style.textAlign = "right";
 }
 
-// Input para cambiar colores de la tipografía y del fondo
+// Change colors of typography and background
 
 textColorInput.oninput = () => {
     memeTopText.style.color = textColorInput.value;
@@ -177,14 +199,14 @@ backgroundColorInput.oninput = () => {
     memeBottomText.style.backgroundColor = backgroundColorInput.value;
 }
 
-// Checkbox para que el color de fondo sea transparente
+// Backgruond transparent
 
 transparentBackgroundCheckbox.onclick = () => {
     memeTopText.classList.toggle("transparent");
     memeBottomText.classList.toggle("transparent");
 }
 
-// Botones para agregar contorno al texto
+// Add outline to text
 
 noOutlineButton.onclick = () => {
     memeTopText.style.textShadow = "none";
@@ -201,14 +223,14 @@ darkOutlineButton.onclick = () => {
     memeBottomText.style.textShadow = "2px 2px #000";
 }
 
-// Input para cambiar el padding del texto
+// Change padding of text
 
 paddingInput.oninput = () => {
     memeTopText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
     memeBottomText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
 }
 
-// Selector de interlineado de texto
+// Line spacing of text
 
 lineHeightSelection.onchange = () => {
     if (lineHeightSelection.value === "0.8") {
@@ -237,39 +259,21 @@ lineHeightSelection.onchange = () => {
     }
 }
 
-// Editor de imagen
 
-const imageUrlInput = document.querySelector(".url-image");
-const imageBackgroundColorInput = document.querySelector("#color");
-const imageBackgroundColorValue = document.querySelector("#color-value");
-const brightnessInput = document.querySelector("#brightness");
-const opacityInput = document.querySelector("#opacity");
-const contrastInput = document.querySelector("#contrast");
-const blurInput = document.querySelector("#blur");
-const greyScaleInput = document.querySelector("#greyscale");
-const sepiaInput = document.querySelector("#sepia");
-const hueInput = document.querySelector("#hue");
-const saturatedInput = document.querySelector("#saturated");
-const negativeInput = document.querySelector("#negative");
-const resetFiltersButton = document.querySelector("#reset-filters-button");
-const memeImage = document.querySelector(".meme-image");
-const urlImg = document.querySelector('.urlImg')
-const imageForm = document.querySelector(".image-form");
-const fondoDeImage = document.querySelector('#background-meme')
-// Input para agregar la url de la imagen
+// Add URL image 
 
 urlImg.onchange = () => {
     memeImage.style.backgroundImage = `url(${urlImg.value})`
 }
 
-// Input para cambiar el color de fondo de la imagen
+// Change background color image
 
 imageBackgroundColorInput.oninput = () => {
     memeImage.style.backgroundColor = imageBackgroundColorInput.value;
     imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
 }
 
-//  Estilos del fondo
+//  Background styles
 fondoDeImage.oninput = () => {
     if (fondoDeImage.value === "lighten")
         memeImage.style.backgroundBlendMode = "lighten";
@@ -284,7 +288,7 @@ fondoDeImage.oninput = () => {
     }
 
 }
-// Aplicar filtros
+// Filters
 
 const actualizarFiltros = () => {
     memeImage.style.filter = `brightness(${brightnessInput.value})
@@ -308,7 +312,7 @@ hueInput.addEventListener('change', actualizarFiltros);
 saturatedInput.addEventListener('change', actualizarFiltros);
 negativeInput.addEventListener('change', actualizarFiltros);
 
-// Reestablecer filtros 
+// Reset filters
 
 resetFiltersButton.onclick = () => {
     memeImage.style.filter = "none";
@@ -323,7 +327,7 @@ resetFiltersButton.onclick = () => {
     negativeInput.value = 0;
 }
 
-// Función para evitar el envío del formulario
+// Prevent form
 
 imageForm.onsubmit = (event) => {
     event.preventDefault()

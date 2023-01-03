@@ -17,38 +17,49 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico" />
     <title>Generador de Memes</title>
   </head>
+
   <body class="container-mode">
-    <!-- Empieza el header -->
+    <!-- Start Header -->
+
     <header class="header">
       <h1 class="main-title">Generador de memes</h1>
+
       <div>
         <button id="image-button" class="button">
           <i class="far fa-file-image"></i> Imagen
         </button>
+
         <button id="text-button" class="button">
           <i class="fas fa-font"></i> Texto
         </button>
+
         <button id="dark-mode-button dark-mode" class="button darkbutton">
           <i class="far fa-lightbulb"></i> Modo oscuro
         </button>
       </div>
     </header>
-    <!-- Termina el header -->
-    <!-- Empieza la caja del meme -->
+
+    <!-- Finish Header -->
+    <!-- Start Box Meme -->
     <main class="main-content">
       <div class="meme-container">
         <p class="meme-top-text meme-text">TOP TEXT</p>
         <div class="meme-image"></div>
         <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
       </div>
+
       <button class="download">Descargar meme</button>
     </main>
-    <!-- Termina la caja del meme -->
-    <!-- Empieza el aside de imagen -->
+
+    <!-- Finish Box Meme -->
+
+    <!-- Start Aside Image -->
+
     <aside class="image-editor aside">
+      ‘
       <button
         class="close-aside"
         id="close-image-aside-button"
@@ -56,11 +67,15 @@
       >
         <i class="fas fa-times"></i>
       </button>
+
       <h2 class="editor-title">IMAGEN</h2>
+
       <form action="" method="POST" class="image-form">
         <!--Url-->
+
         <div class="url-editor editor">
           <h3 class="editor-subtitle">URL</h3>
+
           <input
             type="url"
             class="url-image urlImg"
@@ -69,9 +84,12 @@
             aria-label="url"
           />
         </div>
-        <!--Color de Fondo-->
+
+        <!-- Background Color -->
+
         <div class="background-editor editor">
           <h3 class="editor-subtitle">FONDO</h3>
+
           <div class="form-control color-box">
             <input
               type="color"
@@ -83,22 +101,28 @@
             />
             <span id="color-value">#FFFFFF</span>
           </div>
-          <!--Fonde de imagen-->
+
+          <!-- Background Image -->
+
           <select
             id="background-meme"
             class="form-control color-box"
             aria-label="seleecion de fondo"
           >
             <option value="none" id="none" aria-label="Ninguno">Ninguno</option>
+
             <option value="lighten" id="lighten" aria-label="Aclarar">
               Aclarar
             </option>
+
             <option value="darken" id="darken" aria-label="Oscurecer">
               Oscurecer
             </option>
+
             <option value="difference" id="diferencia" aria-label="Diferencia">
               Diferencia
             </option>
+
             <option
               value="luminosity"
               id="luminosidad"
@@ -106,14 +130,18 @@
             >
               Luminosidad
             </option>
+
             <option value="multiply" id="multiply" aria-label="Multiplicar">
               Multiplicar
             </option>
           </select>
         </div>
-        <!--Filtros de imagen-->
+
+        <!-- Filter Image -->
+
         <div class="filter-editor editor">
           <h3 class="editor-subtitle">FILTROS</h3>
+
           <div class="filter-image">
             <label for="bright"
               >BRILLO
@@ -127,6 +155,7 @@
                 id="brightness"
               />
             </label>
+
             <label for="opacity"
               >OPACIDAD
               <input
@@ -139,6 +168,7 @@
                 id="opacity"
               />
             </label>
+
             <label for="contrast"
               >CONTRASTE
               <input
@@ -151,6 +181,7 @@
                 id="contrast"
               />
             </label>
+
             <label for="blur"
               >DESENFOQUE
               <input
@@ -163,6 +194,7 @@
                 id="blur"
               />
             </label>
+
             <label for="greyscale"
               >ESCALA DE GRISES
               <input
@@ -175,6 +207,7 @@
                 id="greyscale"
               />
             </label>
+
             <label for="sepia"
               >SEPIA
               <input
@@ -187,6 +220,7 @@
                 id="sepia"
               />
             </label>
+
             <label for="hue"
               >HUE
               <input
@@ -199,6 +233,7 @@
                 id="hue"
               />
             </label>
+
             <label for="saturated"
               >SATURADO
               <input
@@ -211,6 +246,7 @@
                 id="saturated"
               />
             </label>
+
             <label for="negative"
               >NEGATIVO
               <input
@@ -225,7 +261,9 @@
             </label>
           </div>
         </div>
-        <!--Reset filtro de imagen-->
+
+        <!-- Reset Filter Image-->
+
         <input
           type="submit"
           class="reset-filters"
@@ -235,8 +273,11 @@
         />
       </form>
     </aside>
-    <!-- Termina el aside de imagen -->
-    <!-- Empieza el aside de texto -->
+
+    <!-- Finish Aside Image -->
+
+    <!-- Star Aside Image -->
+
     <aside class="text-editor aside">
       <button
         class="close-aside"
@@ -245,9 +286,12 @@
       >
         <i class="fas fa-times"></i>
       </button>
+
       <h2 class="editor-title">TEXTO</h2>
+
       <div class="editor">
         <h3 class="editor-subtitle">SUPERIOR</h3>
+
         <textarea
           name="top-text-editor"
           id="top-text-editor"
@@ -255,16 +299,20 @@
           class="form-control full-width-form-control"
           aria-label="Top texto"
         ></textarea>
+
         <input
           type="checkbox"
           name="no-top-text"
           id="no-top-text"
           aria-label="checkbox no top texto"
         />
+
         <label for="no-top-text">Sin texto superior</label>
       </div>
+
       <div class="editor">
         <h3 class="editor-subtitle">INFERIOR</h3>
+
         <textarea
           name="bottom-text-editor"
           id="bottom-text-editor"
@@ -272,23 +320,23 @@
           class="form-control full-width-form-control"
           aria-label="bottom texto"
         ></textarea>
+
         <input
           type="checkbox"
           name="no-bottom-text"
           id="no-bottom-text"
           aria-label="checkbox no texto"
         />
+
         <label for="no-bottom-text">Sin texto inferior</label>
       </div>
+
       <div class="editor">
         <h3 class="editor-subtitle">FUENTE</h3>
+
         <select
           id="font-selection"
-          class="
-            form-control
-            full-width-form-control
-            font-selection-form-control
-          "
+          class="form-control full-width-form-control font-selection-form-control"
           aria-label="seleccionar texto"
         >
           <option value="arial" id="arial">Arial</option>
@@ -304,7 +352,9 @@
             Times New Roman
           </option>
         </select>
+
         <!--Tamaño de fuente-->
+
         <input
           type="number"
           name="font-size"
@@ -314,7 +364,9 @@
           class="form-control font-size-form-control"
           aria-label="tamaño de fuente"
         />
-        <!--Alineacion de texto-->
+
+        <!-- Text Alignment -->
+
         <button
           id="left-alignment"
           class="form-control"
@@ -322,6 +374,7 @@
         >
           <i class="fas fa-align-left"></i>
         </button>
+
         <button
           id="center-alignment"
           class="form-control"
@@ -329,6 +382,7 @@
         >
           <i class="fas fa-align-center"></i>
         </button>
+
         <button
           id="right-alignment"
           class="form-control"
@@ -337,7 +391,9 @@
           <i class="fas fa-align-right"></i>
         </button>
       </div>
-      <!--Selecionar color-->
+
+      <!--Select Color-->
+
       <div class="editor">
         <div class="color-editor">
           <div class="color-editor-column">
@@ -351,7 +407,9 @@
               aria-label="color"
             />
           </div>
-          <!--Selecionar fondo-->
+
+          <!--Select Background-->
+
           <div class="color-editor-column">
             <h3 class="editor-subtitle">FONDO</h3>
             <input
@@ -364,6 +422,7 @@
             />
           </div>
         </div>
+
         <input
           type="checkbox"
           name="transparent-background"
@@ -372,9 +431,12 @@
         />
         <label for="transparent-background">Fondo transparente</label>
       </div>
-      <!--Contorno-->
+
+      <!-- Outline -->
+
       <div class="editor">
         <h3 class="editor-subtitle">CONTORNO</h3>
+
         <button
           id="no-outline"
           class="form-control"
@@ -382,16 +444,21 @@
         >
           Ninguno
         </button>
+
         <button id="light-outline" class="form-control" aria-label="Claro">
           Claro
         </button>
+
         <button id="dark-outline" class="form-control" aria-label="Oscuro">
           Oscuro
         </button>
       </div>
-      <!--Espaciado-->
+
+      <!-- Spacing -->
+
       <div class="editor">
         <h3 class="editor-subtitle">ESPACIADO</h3>
+
         <input
           type="number"
           name="padding"
@@ -403,9 +470,12 @@
           aria-label="Espaciado"
         />
       </div>
-      <!--Interlineado-->
+
+      <!-- Line Spacing -->
+
       <div class="editor">
         <h3 class="editor-subtitle">INTERLINEADO</h3>
+
         <select
           id="line-height"
           class="form-control full-width-form-control interlineal"
@@ -419,7 +489,9 @@
         </select>
       </div>
     </aside>
-    <!-- Termina el aside de texto -->
+
+    <!-- Finish Aside Text -->
+
     <script src="editorDeMemes.js"></script>
   </body>
 </html>
