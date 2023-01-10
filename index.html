@@ -1,497 +1,248 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" type="image/ico" href="favicon.ico" />
-    <title>Generador de Memes</title>
-  </head>
+<html lang="en">
 
-  <body class="container-mode">
-    <!-- Start Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+  <title>Meme Generator</title>
+</head>
 
-    <header class="header">
-      <h1 class="main-title">Generador de memes</h1>
+<body class="container-mode">
 
-      <div>
-        <button id="image-button" class="button">
-          <i class="far fa-file-image"></i> Imagen
-        </button>
-
-        <button id="text-button" class="button">
-          <i class="fas fa-font"></i> Texto
-        </button>
-
-        <button id="dark-mode-button dark-mode" class="button darkbutton">
-          <i class="far fa-lightbulb"></i> Modo oscuro
-        </button>
-      </div>
-    </header>
-
-    <!-- Finish Header -->
-    <!-- Start Box Meme -->
-    <main class="main-content">
-      <div class="meme-container">
-        <p class="meme-top-text meme-text">TOP TEXT</p>
-        <div class="meme-image"></div>
-        <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
-      </div>
-
-      <button class="download">Descargar meme</button>
-    </main>
-
-    <!-- Finish Box Meme -->
-
-    <!-- Start Aside Image -->
-
-    <aside class="image-editor aside">
-      ‘
-      <button
-        class="close-aside"
-        id="close-image-aside-button"
-        aria-label="close panel"
-      >
-        <i class="fas fa-times"></i>
+  <!-- Start Header -->
+  <header class="header">
+    <h1 class="main-title">Meme Generator</h1>
+    <div>
+      <button id="image-button" class="button">
+        <i class="far fa-file-image"></i> Image
       </button>
-
-      <h2 class="editor-title">IMAGEN</h2>
-
-      <form action="" method="POST" class="image-form">
-        <!--Url-->
-
-        <div class="url-editor editor">
-          <h3 class="editor-subtitle">URL</h3>
-
-          <input
-            type="url"
-            class="url-image urlImg"
-            name="url"
-            id="url"
-            aria-label="url"
-          />
-        </div>
-
-        <!-- Background Color -->
-
-        <div class="background-editor editor">
-          <h3 class="editor-subtitle">FONDO</h3>
-
-          <div class="form-control color-box">
-            <input
-              type="color"
-              name="color"
-              id="color"
-              value="#ffffff"
-              class="bkImg"
-              aria-label="color de fondo"
-            />
-            <span id="color-value">#FFFFFF</span>
-          </div>
-
-          <!-- Background Image -->
-
-          <select
-            id="background-meme"
-            class="form-control color-box"
-            aria-label="seleecion de fondo"
-          >
-            <option value="none" id="none" aria-label="Ninguno">Ninguno</option>
-
-            <option value="lighten" id="lighten" aria-label="Aclarar">
-              Aclarar
-            </option>
-
-            <option value="darken" id="darken" aria-label="Oscurecer">
-              Oscurecer
-            </option>
-
-            <option value="difference" id="diferencia" aria-label="Diferencia">
-              Diferencia
-            </option>
-
-            <option
-              value="luminosity"
-              id="luminosidad"
-              aria-label="Luminosidad"
-            >
-              Luminosidad
-            </option>
-
-            <option value="multiply" id="multiply" aria-label="Multiplicar">
-              Multiplicar
-            </option>
-          </select>
-        </div>
-
-        <!-- Filter Image -->
-
-        <div class="filter-editor editor">
-          <h3 class="editor-subtitle">FILTROS</h3>
-
-          <div class="filter-image">
-            <label for="bright"
-              >BRILLO
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0"
-                max="1"
-                step="0.1"
-                value=""
-                id="brightness"
-              />
-            </label>
-
-            <label for="opacity"
-              >OPACIDAD
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0"
-                max="10"
-                step="0.1"
-                value="1"
-                id="opacity"
-              />
-            </label>
-
-            <label for="contrast"
-              >CONTRASTE
-              <input
-                class="range-image form-control"
-                type="range"
-                min="100%"
-                max="1000%"
-                step="1%"
-                value="100%"
-                id="contrast"
-              />
-            </label>
-
-            <label for="blur"
-              >DESENFOQUE
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0px"
-                max="10px"
-                step="0.1px"
-                value="0"
-                id="blur"
-              />
-            </label>
-
-            <label for="greyscale"
-              >ESCALA DE GRISES
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0%"
-                max="100%"
-                value="0%"
-                step="1%"
-                id="greyscale"
-              />
-            </label>
-
-            <label for="sepia"
-              >SEPIA
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0%"
-                max="100%"
-                step="1%"
-                value="1%"
-                id="sepia"
-              />
-            </label>
-
-            <label for="hue"
-              >HUE
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0deg"
-                max="359deg"
-                step="1deg"
-                value="0deg"
-                id="hue"
-              />
-            </label>
-
-            <label for="saturated"
-              >SATURADO
-              <input
-                class="range-image form-control"
-                type="range"
-                min="100%"
-                max="1000%"
-                value="10%"
-                slot="10%"
-                id="saturated"
-              />
-            </label>
-
-            <label for="negative"
-              >NEGATIVO
-              <input
-                class="range-image form-control"
-                type="range"
-                min="0"
-                max="1"
-                value="1"
-                step="0.1"
-                id="negative"
-              />
-            </label>
-          </div>
-        </div>
-
-        <!-- Reset Filter Image-->
-
-        <input
-          type="submit"
-          class="reset-filters"
-          name="reset-filters"
-          id="reset-filters-button"
-          value="Reestablecer filtros"
-        />
-      </form>
-    </aside>
-
-    <!-- Finish Aside Image -->
-
-    <!-- Star Aside Image -->
-
-    <aside class="text-editor aside">
-      <button
-        class="close-aside"
-        id="close-text-aside-button"
-        aria-label="panel de texto"
-      >
-        <i class="fas fa-times"></i>
+      <button id="text-button" class="button">
+        <i class="fas fa-font"></i> Text
       </button>
+      <button id="dark-mode-button dark-mode" class="button darkbutton">
+        <i class="far fa-lightbulb"></i> Dark Mode
+      </button>
+    </div>
+  </header>
+  <!-- Finish Header -->
 
-      <h2 class="editor-title">TEXTO</h2>
+  <!-- Start Box Meme -->
+  <main class="main-content">
+    <div class="meme-container">
+      <p class="meme-top-text meme-text">TOP TEXT</p>
+      <div class="meme-image"></div>
+      <p class="meme-bottom-text meme-text">BOTTOM TEXT</p>
+    </div>
+    <button class="download">Download Meme</button>
+  </main>
+  <!-- Finish Box Meme -->
 
-      <div class="editor">
-        <h3 class="editor-subtitle">SUPERIOR</h3>
+  <!-- Start Aside Image -->
+  <aside class="image-editor aside">
+    <button class="close-aside" id="close-image-aside-button" aria-label="close panel">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2 class="editor-title">IMAGE</h2>
+    <form action="" method="POST" class="image-form">
 
-        <textarea
-          name="top-text-editor"
-          id="top-text-editor"
-          placeholder="TOP TEXT"
-          class="form-control full-width-form-control"
-          aria-label="Top texto"
-        ></textarea>
-
-        <input
-          type="checkbox"
-          name="no-top-text"
-          id="no-top-text"
-          aria-label="checkbox no top texto"
-        />
-
-        <label for="no-top-text">Sin texto superior</label>
+      <!--Url-->
+      <div class="url-editor editor">
+        <h3 class="editor-subtitle">URL</h3>
+        <input type="url" class="url-image urlImg" name="url" id="url" aria-label="url" />
       </div>
 
-      <div class="editor">
-        <h3 class="editor-subtitle">INFERIOR</h3>
+      <!-- Background Color -->
+      <div class="background-editor editor">
+        <h3 class="editor-subtitle">BACKGROUND</h3>
+        <div class="form-control color-box">
+          <input type="color" name="color" id="color" value="#ffffff" class="bkImg" aria-label="Background Color" />
+          <span id="color-value">#FFFFFF</span>
+        </div>
 
-        <textarea
-          name="bottom-text-editor"
-          id="bottom-text-editor"
-          placeholder="BOTTOM TEXT"
-          class="form-control full-width-form-control"
-          aria-label="bottom texto"
-        ></textarea>
-
-        <input
-          type="checkbox"
-          name="no-bottom-text"
-          id="no-bottom-text"
-          aria-label="checkbox no texto"
-        />
-
-        <label for="no-bottom-text">Sin texto inferior</label>
-      </div>
-
-      <div class="editor">
-        <h3 class="editor-subtitle">FUENTE</h3>
-
-        <select
-          id="font-selection"
-          class="form-control full-width-form-control font-selection-form-control"
-          aria-label="seleccionar texto"
-        >
-          <option value="arial" id="arial">Arial</option>
-          <option value="arial-black" id="arial-black">Arial Black</option>
-          <option value="american-typewriter" id="american-typewriter">
-            American Typewriter
+        <!-- Background Image -->
+        <select id="background-meme" class="form-control color-box" aria-label="Background selector">
+          <option value="none" id="none" aria-label="None">None</option>
+          <option value="lighten" id="lighten" aria-label="lighten">
+            Lighten
           </option>
-          <option value="comic-sans" id="comic-sans">Comic Sans MS</option>
-          <option value="helvetica" id="helvetica">Helvetica</option>
-          <option value="impact" id="impact" selected>Impact</option>
-          <option value="verdana" id="verdana">Verdana</option>
-          <option value="times-new-roman" id="times-new-roman">
-            Times New Roman
+          <option value="darken" id="darken" aria-label="darken">
+            Darken
+          </option>
+          <option value="difference" id="diferencia" aria-label="difference">
+            Difference
+          </option>
+          <option value="luminosity" id="luminosidad" aria-label="luminosity">
+            Luminosity
+          </option>
+          <option value="multiply" id="multiply" aria-label="multiply">
+            Multiply
           </option>
         </select>
-
-        <!--Tamaño de fuente-->
-
-        <input
-          type="number"
-          name="font-size"
-          id="font-size"
-          placeholder="40"
-          min="12"
-          class="form-control font-size-form-control"
-          aria-label="tamaño de fuente"
-        />
-
-        <!-- Text Alignment -->
-
-        <button
-          id="left-alignment"
-          class="form-control"
-          aria-label="Alineacion izquierda"
-        >
-          <i class="fas fa-align-left"></i>
-        </button>
-
-        <button
-          id="center-alignment"
-          class="form-control"
-          aria-label="Alineacion central"
-        >
-          <i class="fas fa-align-center"></i>
-        </button>
-
-        <button
-          id="right-alignment"
-          class="form-control"
-          aria-label="Alineacion derecha"
-        >
-          <i class="fas fa-align-right"></i>
-        </button>
       </div>
 
-      <!--Select Color-->
+      <!-- Filter Image -->
+      <div class="filter-editor editor">
+        <h3 class="editor-subtitle">FILTERS</h3>
+        <div class="filter-image">
+          <label for="bright">BRIGHT
+            <input class="range-image form-control" type="range" min="0" max="1" step="0.1" value="" id="brightness" />
+          </label>
+          <label for="opacity">OPACITY
+            <input class="range-image form-control" type="range" min="0" max="1" step="0.1" value="1" id="opacity" />
+          </label>
+          <label for="contrast">CONTRAST
+            <input class="range-image form-control" type="range" min="100%" max="1000%" step="1%" value="1000%"
+              id="contrast" />
+          </label>
+          <label for="blur">BLUR
+            <input class="range-image form-control" type="range" min="0px" max="10px" step="0.1px" value="0"
+              id="blur" />
+          </label>
+          <label for="greyscale">GREYSCALE
+            <input class="range-image form-control" type="range" min="0%" max="100%" value="0%" step="1%"
+              id="greyscale" />
+          </label>
+          <label for="sepia">SEPIA
+            <input class="range-image form-control" type="range" min="0%" max="100%" step="1%" value="0%" id="sepia" />
+          </label>
+          <label for="hue">HUE
+            <input class="range-image form-control" type="range" min="0deg" max="359deg" step="1deg" value="0deg"
+              id="hue" />
+          </label>
+          <label for="saturated">SATURATED
+            <input class="range-image form-control" type="range" min="100%" max="1000%" value="0%" slot="10%"
+              id="saturated" />
+          </label>
+          <label for="negative">NEGATIVE
+            <input class="range-image form-control" type="range" min="0" max="1" value="0" step="0.1" id="negative" />
+          </label>
+        </div>
+      </div>
 
-      <div class="editor">
-        <div class="color-editor">
-          <div class="color-editor-column">
-            <h3 class="editor-subtitle">COLOR</h3>
-            <input
-              type="color"
-              name="text-color"
-              id="text-color"
-              value="#000000"
-              class="form-control"
-              aria-label="color"
-            />
-          </div>
+      <!-- Reset Filter Image-->
+      <input type="submit" class="reset-filters" name="reset-filters" id="reset-filters-button"
+        value="Restore filters" />
+    </form>
+  </aside>
+  <!-- Finish Aside Image -->
 
-          <!--Select Background-->
+  <!-- Star Aside Image -->
+  <aside class="text-editor aside">
+    <button class="close-aside" id="close-text-aside-button" aria-label="Text Panel">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2 class="editor-title">TEXT</h2>
+    <div class="editor">
+      <h3 class="editor-subtitle">TOP</h3>
+      <textarea name="top-text-editor" id="top-text-editor" placeholder="TOP TEXT"
+        class="form-control full-width-form-control" aria-label="Top texto"></textarea>
+      <input type="checkbox" name="no-top-text" id="no-top-text" aria-label="checkbox no top texto" />
+      <label for="no-top-text">Without top tex</label>
+    </div>
+    <div class="editor">
+      <h3 class="editor-subtitle">BOTTOM</h3>
+      <textarea name="bottom-text-editor" id="bottom-text-editor" placeholder="BOTTOM TEXT"
+        class="form-control full-width-form-control" aria-label="bottom texto"></textarea>
+      <input type="checkbox" name="no-bottom-text" id="no-bottom-text" aria-label="checkbox no bottom text" />
+      <label for="no-bottom-text">Without bottom text</label>
+    </div>
+    <div class="editor">
+      <h3 class="editor-subtitle">FONT</h3>
+      <select id="font-selection" class="form-control full-width-form-control font-selection-form-control"
+        aria-label="Select Font">
+        <option value="Arial, Helvetica, sans-serif">Arial</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="American Typewriter">American Typewriter</option>
+        <option value="monospace">Monospace</option>
+        <option value="Comic Sans MS" selected>Comic Sans MS</option>
+        <option value="Comic Neue">Comic Neue</option>
+        <option value="Impact">Impact</option>
+        <option value="Verdana">Verdana</option>
+        <option value="DotGothic16">Dot Gothic</option>
+      </select>
 
-          <div class="color-editor-column">
-            <h3 class="editor-subtitle">FONDO</h3>
-            <input
-              type="color"
-              name="background-color"
-              id="background-color"
-              value="#ffffff"
-              class="form-control"
-              aria-label="fondo"
-            />
-          </div>
+      <!-- Font Size -->
+      <input type="number" name="font-size" id="font-size" placeholder="40" min="12"
+        class="form-control font-size-form-control" aria-label="Font Size" />
+
+      <!-- Text Alignment -->
+      <button id="left-alignment" class="form-control" aria-label="left-alignment">
+        <i class="fas fa-align-left"></i>
+      </button>
+      <button id="center-alignment" class="form-control" aria-label="center-alignment">
+        <i class="fas fa-align-center"></i>
+      </button>
+      <button id="right-alignment" class="form-control" aria-label="right-alignment">
+        <i class="fas fa-align-right"></i>
+      </button>
+    </div>
+
+    <!--Select Color-->
+    <div class="editor">
+      <div class="color-editor">
+        <div class="color-editor-column">
+          <h3 class="editor-subtitle">COLOR</h3>
+          <input type="color" name="text-color" id="text-color" value="#000000" class="form-control"
+            aria-label="color" />
         </div>
 
-        <input
-          type="checkbox"
-          name="transparent-background"
-          id="transparent-background"
-          aria-label="checkbox fondo trasparente"
-        />
-        <label for="transparent-background">Fondo transparente</label>
+        <!--Select Background-->
+        <div class="color-editor-column">
+          <h3 class="editor-subtitle">BACKGROUND</h3>
+          <input type="color" name="background-color" id="background-color" value="#ffffff" class="form-control"
+            aria-label="Background" />
+        </div>
       </div>
+      <input type="checkbox" name="transparent-background" id="transparent-background"
+        aria-label="checkbox transparent background" />
+      <label for="transparent-background">Transparent background</label>
+    </div>
 
-      <!-- Outline -->
+    <!-- Outline -->
+    <div class="editor">
+      <h3 class="editor-subtitle">OUTLINE</h3>
+      <button id="no-outline" class="form-control" aria-label="none">
+        None
+      </button>
+      <button id="light-outline" class="form-control" aria-label="Light">
+        Light
+      </button>
+      <button id="dark-outline" class="form-control" aria-label="Dark">
+        Dark
+      </button>
+    </div>
 
-      <div class="editor">
-        <h3 class="editor-subtitle">CONTORNO</h3>
+    <!-- Spacing -->
+    <div class="editor">
+      <h3 class="editor-subtitle">SPACING</h3>
+      <input type="number" name="padding" id="padding" min="10" max="50" placeholder="35"
+        class="form-control full-width-form-control" aria-label="Spacing" />
+    </div>
 
-        <button
-          id="no-outline"
-          class="form-control"
-          aria-label="Ningun contorno"
-        >
-          Ninguno
-        </button>
+    <!-- Line Spacing -->
+    <div class="editor">
+      <h3 class="editor-subtitle">LINE HEIGHT</h3>
+      <select id="line-height" class="form-control full-width-form-control line-height">
+        <option value="0.8" id="cero-eight">0.8</option>
+        <option value="1" id="one">1</option>
+        <option value="1.2" id="one-two" selected>1.2</option>
+        <option value="1.5" id="one-five">1.5</option>
+        <option value="2" id="two">2</option>
+        <option value="2.5" id="two-five">2.5</option>
+      </select>
+    </div>
+  </aside>
+  <!-- Finish Aside Text -->
 
-        <button id="light-outline" class="form-control" aria-label="Claro">
-          Claro
-        </button>
+  <script src="editorDeMemes.js"></script>
+</body>
 
-        <button id="dark-outline" class="form-control" aria-label="Oscuro">
-          Oscuro
-        </button>
-      </div>
-
-      <!-- Spacing -->
-
-      <div class="editor">
-        <h3 class="editor-subtitle">ESPACIADO</h3>
-
-        <input
-          type="number"
-          name="padding"
-          id="padding"
-          min="10"
-          max="50"
-          placeholder="35"
-          class="form-control full-width-form-control"
-          aria-label="Espaciado"
-        />
-      </div>
-
-      <!-- Line Spacing -->
-
-      <div class="editor">
-        <h3 class="editor-subtitle">INTERLINEADO</h3>
-
-        <select
-          id="line-height"
-          class="form-control full-width-form-control interlineal"
-        >
-          <option value="0.8" id="cero-eight">0.8</option>
-          <option value="1" id="one">1</option>
-          <option value="1.2" id="one-two" selected>1.2</option>
-          <option value="1.5" id="one-five">1.5</option>
-          <option value="2" id="two">2</option>
-          <option value="2.5" id="two-five">2.5</option>
-        </select>
-      </div>
-    </aside>
-
-    <!-- Finish Aside Text -->
-
-    <script src="editorDeMemes.js"></script>
-  </body>
 </html>

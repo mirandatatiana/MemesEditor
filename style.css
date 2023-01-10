@@ -1,4 +1,4 @@
-/* Estilos básicos */
+/* Basics Styles */
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-/* Estilos del header */
+/* Header Styles */
 .header {
   background-color: #191e2b;
   display: flex;
@@ -36,7 +36,7 @@
   background-color: #393e49;
 }
 
-/* Estilos del main */
+/* Main Styles */
 .main-content {
   background-color: #30343f;
   height: 85vh;
@@ -83,7 +83,7 @@
   background-color: #245321;
 }
 
-/* Estilos de los dos aside */
+/* Asides Styles */
 .aside {
   background-color: #252935;
   height: 100vh;
@@ -144,8 +144,8 @@ input[type="color"] {
   border: none;
   box-sizing: border-box;
 }
-/* Estilos del aside de imagen */
 
+/* Image Aside Styles */
 .input-control {
   border-radius: 3px;
 }
@@ -200,8 +200,7 @@ input[type="range"] {
   background-color: rgb(122, 121, 121);
 }
 
-/* Estilos del aside de texto */
-
+/* Text Aside Styles */
 .text-editor {
   display: none;
 }
@@ -224,7 +223,7 @@ input[type="range"] {
   padding: 0 2px;
 }
 
-/* Estilos del Dark-light mode*/
+/* Dark-light mode Styles*/
 
 .container-light header {
   background-color: #e9e9e9;
@@ -312,19 +311,18 @@ input[type="range"] {
   color: #30343f;
 }
 
-.container-light .interlineal {
+.container-light .line-height {
   background-color: #e6e6e6;
 }
-.container-light .interlineal:hover {
+.container-light .line-height:hover {
   background-color: #c3c2c2;
 }
 .container-light .main-content {
   background-color: #c3c2c2;
 }
 
-/* Estios del icono para cerrar el aside oculto */
-
-.close-aside {
+/* Icon Aside hidden Styles*/
+Basics Styles .close-aside {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -338,9 +336,6 @@ input[type="range"] {
 }
 
 /* Responsive */
-
-/* Se muestra el boton de cerrar aside */
-
 @media screen and (max-width: 1200px) {
   .close-aside {
     display: block;
@@ -351,15 +346,11 @@ input[type="range"] {
   }
 }
 
-/* Se oculta el aside */
-
 @media screen and (max-width: 1000px) {
   .aside {
     display: none;
   }
 }
-
-/* Los aside pasan a ocupar todo el ancho de pantalla */
 
 @media screen and (max-width: 700px) {
   .aside {
@@ -373,7 +364,7 @@ input[type="range"] {
   }
 }
 
-/* Clase para ocultar elementos con Javascript */
+/* Hidden elements of Javascript*/
 
 .hide {
   display: none;

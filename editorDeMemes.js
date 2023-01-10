@@ -1,5 +1,4 @@
 // Image Editor
-
 const imageUrlInput = document.querySelector(".url-image");
 const imageBackgroundColorInput = document.querySelector("#color");
 const imageBackgroundColorValue = document.querySelector("#color-value");
@@ -14,12 +13,11 @@ const saturatedInput = document.querySelector("#saturated");
 const negativeInput = document.querySelector("#negative");
 const resetFiltersButton = document.querySelector("#reset-filters-button");
 const memeImage = document.querySelector(".meme-image");
-const urlImg = document.querySelector('.urlImg')
+const urlImg = document.querySelector(".urlImg")
 const imageForm = document.querySelector(".image-form");
-const fondoDeImage = document.querySelector('#background-meme')
+const fondoDeImage = document.querySelector("#background-meme")
 
 // Text Editor
-
 const memeTopText = document.querySelector(".meme-top-text");
 const memeTopTextEditor = document.querySelector("#top-text-editor");
 const topTextCheckbox = document.querySelector("#no-top-text");
@@ -55,8 +53,7 @@ const lineHeightTwo = document.querySelector("#two");
 const lineHeightTwoFive = document.querySelector("#two-five");
 
 
-// Dark Mood
-
+// Dark Mode
 const containerMode = document.querySelector(".container-mode")
 const buttonDarkMode = document.querySelector(".darkbutton")
 
@@ -68,28 +65,24 @@ const changeMode = () => {
 buttonDarkMode.onclick = changeMode
 
 // Aside Buttons Text
-
 const textEditorButton = document.getElementById("text-button");
 const textEditorAside = document.querySelector(".text-editor");
 const imageEditorButton = document.getElementById("image-button");
 const imageEditorAside = document.querySelector(".image-editor");
 
 // Aside Buttons Image
-
 imageEditorButton.onclick = () => {
     textEditorAside.style.display = "none";
     imageEditorAside.style.display = "block";
 }
 
 // Button Aside Text
-
 textEditorButton.onclick = () => {
     imageEditorAside.style.display = "none";
     textEditorAside.style.display = "block";
 }
 
 // Closed Aside
-
 const closeImageAsideButton = document.querySelector("#close-image-aside-button");
 const closeTextAsideButton = document.querySelector("#close-text-aside-button");
 
@@ -103,13 +96,11 @@ closeTextAsideButton.onclick = () => {
 
 
 // Top Text 
-
 memeTopTextEditor.oninput = () => {
     memeTopText.textContent = memeTopTextEditor.value;
 }
 
-// Eliminate the top text
-
+// Delete the top text
 topTextCheckbox.onclick = () => {
     memeTopText.classList.toggle("hide");
 }
@@ -120,58 +111,24 @@ memeBottomTextEditor.oninput = () => {
     memeBottomText.textContent = memeBottomTextEditor.value;
 }
 
-// Eliminate the bottom text
-
+// Delete the bottom text
 bottomTextCheckbox.onclick = () => {
     memeBottomText.classList.toggle("hide");
 }
 
 // Typography Selector
-
 fontSelection.onchange = () => {
-    if (fontSelection.value === "arial") {
-        memeTopText.style.fontFamily = "Arial";
-        memeBottomText.style.fontFamily = "Arial";
-    }
-    else if (fontSelection.value === "arial-black") {
-        memeTopText.style.fontFamily = "Arial Black";
-        memeBottomText.style.fontFamily = "Arial Black";
-    }
-    else if (fontSelection.value === "american-typewriter") {
-        memeTopText.style.fontFamily = "American Typewriter";
-        memeBottomText.style.fontFamily = "American Typewriter";
-    }
-    else if (fontSelection.value === "comic-sans") {
-        memeTopText.style.fontFamily = "Comic Sans MS";
-        memeBottomText.style.fontFamily = "Comic Sans MS";
-    }
-    else if (fontSelection.value === "helvetica") {
-        memeTopText.style.fontFamily = "Helvetica";
-        memeBottomText.style.fontFamily = "Helvetica";
-    }
-    else if (fontSelection.value === "impact") {
-        memeTopText.style.fontFamily = "Impact";
-        memeBottomText.style.fontFamily = "Impact";
-    }
-    else if (fontSelection.value === "verdana") {
-        memeTopText.style.fontFamily = "Verdana";
-        memeBottomText.style.fontFamily = "Verdana";
-    }
-    else if (fontSelection.value === "times-new-roman") {
-        memeTopText.style.fontFamily = "Times New Roman";
-        memeBottomText.style.fontFamily = "Times New Roman";
-    }
+    memeTopText.style.fontFamily = fontSelection.value
+    memeBottomText.style.fontFamily = fontSelection.value
 }
 
 // Modify size of typography
-
 fontSizeInput.oninput = () => {
     memeTopText.style.fontSize = `${fontSizeInput.value}px`;
     memeBottomText.style.fontSize = `${fontSizeInput.value}px`;
 }
 
 // Bottons for Alignment text 
-
 leftAlignmentButton.onclick = () => {
     memeTopText.style.textAlign = "left";
     memeBottomText.style.textAlign = "left";
@@ -188,7 +145,6 @@ rightAlignmentButton.onclick = () => {
 }
 
 // Change colors of typography and background
-
 textColorInput.oninput = () => {
     memeTopText.style.color = textColorInput.value;
     memeBottomText.style.color = textColorInput.value;
@@ -200,14 +156,12 @@ backgroundColorInput.oninput = () => {
 }
 
 // Backgruond transparent
-
 transparentBackgroundCheckbox.onclick = () => {
     memeTopText.classList.toggle("transparent");
     memeBottomText.classList.toggle("transparent");
 }
 
 // Add outline to text
-
 noOutlineButton.onclick = () => {
     memeTopText.style.textShadow = "none";
     memeBottomText.style.textShadow = "none";
@@ -224,14 +178,12 @@ darkOutlineButton.onclick = () => {
 }
 
 // Change padding of text
-
 paddingInput.oninput = () => {
     memeTopText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
     memeBottomText.style.padding = `${paddingInput.value}px 0px ${paddingInput.value}px 0px`;
 }
 
 // Line spacing of text
-
 lineHeightSelection.onchange = () => {
     if (lineHeightSelection.value === "0.8") {
         memeTopText.style.lineHeight = "0.8";
@@ -261,13 +213,11 @@ lineHeightSelection.onchange = () => {
 
 
 // Add URL image 
-
 urlImg.onchange = () => {
     memeImage.style.backgroundImage = `url(${urlImg.value})`
 }
 
 // Change background color image
-
 imageBackgroundColorInput.oninput = () => {
     memeImage.style.backgroundColor = imageBackgroundColorInput.value;
     imageBackgroundColorValue.textContent = imageBackgroundColorInput.value;
@@ -289,7 +239,6 @@ fondoDeImage.oninput = () => {
 
 }
 // Filters
-
 const actualizarFiltros = () => {
     memeImage.style.filter = `brightness(${brightnessInput.value})
      opacity(${opacityInput.value})
@@ -313,7 +262,6 @@ saturatedInput.addEventListener('change', actualizarFiltros);
 negativeInput.addEventListener('change', actualizarFiltros);
 
 // Reset filters
-
 resetFiltersButton.onclick = () => {
     memeImage.style.filter = "none";
     brightnessInput.value = 1;
@@ -328,7 +276,6 @@ resetFiltersButton.onclick = () => {
 }
 
 // Prevent form
-
 imageForm.onsubmit = (event) => {
     event.preventDefault()
 }
